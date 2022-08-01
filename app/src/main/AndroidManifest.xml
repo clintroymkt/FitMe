@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.MyHealth">
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
+
+    <application
+        android:name=".SampleApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_round"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.GMed"
+        tools:replace="android:theme">
+        <activity
+            android:name=".Scan2"
+            android:exported="false" />
+        <activity
+            android:name=".SleepPage"
+            android:exported="false" />
+        <activity
+            android:name=".ui.RecoverActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Backupactivity"
+            android:exported="false" />
+        <activity
+            android:name=".SPO2page"
+            android:exported="false" />
+        <activity
+            android:name=".BPpage"
+            android:exported="false" />
+        <activity android:name=".FindScreen" />
+        <activity android:name=".fitnessbands.scan.ScanActivity" />
+        <activity android:name=".IntWellness" />
+        <activity android:name=".PhysWellness" />
+        <activity android:name=".OTPVerify" />
+        <activity android:name=".ConfirmationActivity" />
+        <activity android:name=".SignUpActivity" />
+        <activity android:name=".StepsPage" />
+        <activity android:name=".CallCenterActivity" />
+        <activity android:name=".BmiActivity" />
+        <activity android:name=".FitDash" />
+        <activity android:name=".fitnessbands.device.DeviceActivity" />
+        <activity android:name=".TestActivity" />
+        <activity android:name=".ui.MainActivity" />
+        <activity android:name=".OnlineActivity" />
+        <activity android:name=".ui.NewPatient" />
+        <activity android:name=".ui.WaitingList" />
+        <activity android:name=".ui.OneTimeActivity" />
+        <activity android:name=".ui.SummaryActivity" />
+        <activity android:name=".ui.PatientAdd" />
+        <activity android:name=".ui.DefDiag" />
+        <activity android:name=".ui.DiffDiag" />
+        <activity android:name=".ui.ComplaintAdd" />
+        <activity android:name=".ui.Complaints" />
+        <activity android:name=".ui.Billing" />
+        <activity android:name=".ui.DocDirectory" />
+        <activity android:name=".ui.PastHistory" />
+        <activity android:name=".ui.FamHistory" />
+        <activity android:name=".ui.AssesmentActivity" />
+        <activity android:name=".ui.ScheduleConsult" />
+        <activity android:name=".ui.ReferComment" />
+        <activity android:name=".ui.ReferList" />
+        <activity android:name=".ui.HospComment" />
+        <activity android:name=".ui.hospitalList" />
+        <activity android:name=".ui.Review" />
+        <activity android:name=".ui.VitalsArch" />
+        <activity android:name=".ui.ManagementPlan" />
+        <activity android:name=".ui.NurseActivity" />
+        <activity android:name=".ui.ConsultancyNurse" />
+        <activity android:name=".ui.Management" />
+        <activity android:name=".ui.Diagnosis" />
+        <activity android:name=".ui.PhysExam" />
+        <activity android:name=".ui.SystemicRev" />
+        <activity android:name=".ui.PatientHistory" />
+        <activity android:name=".ui.PatientDetails" />
+        <activity android:name=".ui.ListData" />
+        <activity android:name=".ui.PatientList" />
+        <activity android:name=".ui.DocList" />
+        <activity android:name=".ui.MachineActivity" />
+        <activity
+            android:name="demo.minttihealth.activity.LauncherActivity"
+            android:theme="@style/LauncherTheme" />
+        <activity
+            android:name="demo.minttihealth.activity.MintActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="demo.minttihealth.activity.HealthMonitorActivity"
+            android:configChanges="keyboard|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="demo.minttihealth.activity.ThermometerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name="demo.minttihealth.activity.ECGLargeActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="demo.minttihealth.activity.UserProfileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustResize" />
+
+        <service android:name="demo.minttihealth.health.HcService" />
+
+        <activity android:name="com.kl.minttisdkdemo.StethoActivity" />
+        <activity android:name="com.kl.minttisdkdemo.base.BaseActivity" />
+        <activity android:name="com.kl.minttisdkdemo.FirmwareListActivity" />
+        <activity android:name="com.kl.minttisdkdemo.MeasureActivity" />
+        <activity android:name="com.berry_med.monitordemo.activity.MonitorActivity" />
+        <activity android:name="com.example.androidscreenrecorder.ScreenrecorderActivity" />
+        <activity android:name=".ui.OutgoingMeetingActivity" />
+        <activity android:name=".ui.IncomingMeetingActivity" />
+        <activity android:name=".ui.CallingAdmin" />
+        <activity android:name=".ui.ConsultancyAdmin" />
+        <activity android:name=".ui.AdminActivity" />
+        <activity android:name=".ui.Calling" />
+        <activity android:name=".ui.Consultancy" />
+        <activity
+            android:name=".ui.LoginActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.crrepa.ble.trans.upgrade.NotificationActivity" />
+
+        <service android:name="com.crrepa.ble.trans.upgrade.DfuService" />
+    </application>
+
+</manifest>

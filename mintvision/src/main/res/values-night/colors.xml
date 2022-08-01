@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#080808</color>
+    <color name="colorPrimaryDark">#080808</color>
+    <color name="colorAccent">#CD9E12</color>
+    <color name="colorBackground">#000000</color>
+    <color name="colorECGLargeGrid">#23283D</color>
+    <color name="colorECGSmallGrid">#5D5F6B</color>
+</resources>

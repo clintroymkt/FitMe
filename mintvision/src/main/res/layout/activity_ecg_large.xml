@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical">
+
+    <demo.minttihealth.widget.EcgBackgroundView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <demo.minttihealth.widget.ReboundHorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent">
+
+        <demo.minttihealth.widget.WaveView
+            android:id="@+id/wave_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:scrollable="true" />
+    </demo.minttihealth.widget.ReboundHorizontalScrollView>
+
+</FrameLayout>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@drawable/white_background"
+
+    tools:context=".ui.LoginActivity">
+
+
+    <RelativeLayout
+        android:layout_width="320dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/side_pane_left"
+        android:gravity="center" />
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="200dp"
+
+        android:layout_marginRight="20dp"
+        android:background="@drawable/login_shape_bg"
+
+
+        android:elevation="10dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+
+        android:paddingRight="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="Please Login"
+            android:textAlignment="center"
+            android:textSize="20sp" />
+
+
+        <com.google.android.material.textfield.TextInputEditText
+
+            android:id="@+id/txtlgusername"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/edittext_bg"
+            android:ems="10"
+
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:fontFamily="@font/poppins_light"
+            android:hint="Email/Username"
+            android:inputType="text"
+            android:paddingLeft="20dp"
+            android:textColor="@color/black"
+
+            android:textColorHint="@color/highlightColor"
+            android:textSize="20sp" />
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtlgpassword"
+            android:layout_width="match_parent"
+
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/edittext_bg"
+            android:ems="10"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+
+            android:fontFamily="@font/poppins_light"
+
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:paddingLeft="20dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/highlightColor"
+
+            android:textSize="20sp"
+            app:passwordToggleEnabled="true" />
+
+
+        <Button
+            android:id="@+id/loginBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+
+
+            android:background="@drawable/button_rounded"
+            android:text="Login"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/lgsignupBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+
+            android:background="@drawable/button_rounded"
+            android:text="Sign Up"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/skipBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+
+            android:background="@drawable/button_rounded"
+            android:text="Skip Login"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

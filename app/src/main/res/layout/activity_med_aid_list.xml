@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@drawable/white_background"
+
+    tools:context=".MedAidList">
+
+
+
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/logolayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/login_shape_bg"
+        android:orientation="vertical"
+        android:padding="30dp"
+
+
+        tools:ignore="MissingConstraints"
+        android:elevation="10dp"
+
+        >
+
+
+        <!--<TextView
+            android:fontFamily="@font/poppins_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Welcome"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="30sp" /> -->
+        <ImageView
+            android:elevation="2dp"
+            android:id="@+id/mhzlogo"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:src="@drawable/mhz">
+
+        </ImageView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/logolayout"
+        android:layout_width="220dp"
+        android:layout_height="480dp"
+        android:background="@drawable/side_pane_left"/>
+
+    <RelativeLayout
+        android:layout_below="@id/logolayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+
+                android:layout_marginTop="80dp"
+                android:background="@drawable/login_shape_bg"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:gravity="center"
+
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"
+
+
+                android:layout_below="@+id/logolayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+
+                android:elevation="10dp"
+                >
+
+                <TextView
+                    android:layout_marginTop="2dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Choose your Medical Aid"
+                    android:textSize="20sp"
+                    android:textAlignment="center"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/aidrecycler"
+                android:layout_width="match_parent"
+                android:layout_height="380dp"
+                android:padding="20dp"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+</RelativeLayout>

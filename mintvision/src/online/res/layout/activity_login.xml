@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.linktop.uis.activities.LoginActivity">
+
+    <data>
+
+        <variable
+            name="accInfo"
+            type="demo.minttihealth.bean.AccInfo" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/colorBackground"
+        android:padding="16dp">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:errorEnabled="true"
+            app:errorTextAppearance="@style/errorTextForInputLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="8dp"
+                android:hint="@string/account"
+                android:imeOptions="actionNext"
+                android:inputType="phone"
+                android:maxLength="15"
+                android:text="@={accInfo.mobileNo}"
+                android:textSize="16sp">
+
+                <requestFocus />
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:errorEnabled="true"
+            app:errorTextAppearance="@style/errorTextForInputLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="8dp"
+                android:hint="@string/password"
+                android:imeOptions="actionDone"
+                android:inputType="text|textPassword"
+                android:text="@={accInfo.password}"
+                android:textSize="16sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:onClick="doLogin"
+            android:text="@string/login" />
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:onClick="doRegisterOrRestPsw"
+            android:text="@string/register_or_reset_psw" />
+
+    </LinearLayout>
+
+</layout>

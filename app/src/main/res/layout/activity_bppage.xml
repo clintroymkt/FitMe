@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+
+    android:background="@drawable/white_background"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+
+    tools:context=".BPpage">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F5DF4653"
+
+        />
+
+    <TextView
+        android:id="@+id/txtStplogo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="40sp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="sans-serif-light"
+        android:gravity="start"
+        android:text="BP"
+        android:textColor="@color/logoColorWhite"
+        android:textSize="34sp" />
+
+
+    <ScrollView
+        android:layout_marginTop="50dp"
+        android:id="@+id/stepScroller"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="2dp"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_edge_card">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+
+                android:background="@drawable/round_edge_card"
+                android:elevation="8dp">
+
+                <RelativeLayout
+                    android:id="@+id/inputFields"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elevation="2dp"
+
+
+
+                    android:padding="5sp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true">
+
+                    <TextView
+                        android:id="@+id/txtStepslogo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Blood Pressure"
+                        android:textStyle="bold"
+                        android:textColor="#F5DF4653"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"/>
+
+                    <TextView
+                        android:id="@+id/BPparagraph"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtStepslogo"
+                        android:fontFamily="@font/nunito_bold"
+                        android:gravity="center"
+                        android:text="Blood Pressure is often a case by case situation, with a patient's average blood pressure often being what is observed. However: \n Normal blood pressure for most adults is defined as a systolic pressure of less than 120 and a diastolic pressure of less than 80. \n
+Elevated blood pressure is defined as a systolic pressure between 120 and 129 with a diastolic pressure of less than 80. \n High blood pressure is defined as 130 or higher for the first number, or 80 or higher for the second number." />
+
+
+                    <View
+                        android:id="@+id/seperator"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#7AC0FA"
+                        android:backgroundTint="#7AC0FA"
+                        android:layout_below="@+id/txtStepslogo"/>
+
+
+
+                    <ListView
+                        android:id="@+id/listvBPdata"
+                        android:layout_width="match_parent"
+                        android:layout_height="500dp"
+                        android:layout_below="@+id/BPparagraph"
+
+                        android:layout_gravity="center"
+                        android:layout_marginTop="45dp"
+                        android:orientation="vertical"
+
+                        >
+
+
+                    </ListView>
+
+
+
+
+
+
+                </RelativeLayout>
+
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

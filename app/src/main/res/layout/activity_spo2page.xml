@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+
+    android:background="@drawable/white_background"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+
+    tools:context=".SPO2page">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorMeetingInvitationStart"
+
+        />
+
+    <TextView
+        android:id="@+id/txtSPO2logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="20sp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="sans-serif-light"
+        android:gravity="start"
+        android:text="Blood Oxygen/SPO2"
+        android:textColor="@color/logoColorWhite"
+        android:textSize="34sp" />
+
+
+    <ScrollView
+        android:layout_marginTop="50dp"
+        android:id="@+id/spo2Scroller"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="2dp"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_edge_card">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+
+                android:background="@drawable/round_edge_card"
+                android:elevation="8dp">
+
+                <RelativeLayout
+                    android:id="@+id/inputFields"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elevation="2dp"
+
+
+
+                    android:padding="5sp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true">
+
+                    <TextView
+                        android:id="@+id/txtStepslogo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:text="SPO2"
+                        android:textColor="@color/colorMeetingInvitationStart"
+                        android:textStyle="bold" />
+
+
+                    <com.github.mikephil.charting.charts.BarChart
+                        android:id="@+id/SPO2Chart"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:layout_below="@+id/seperator" />
+
+                    <View
+                        android:id="@+id/seperator"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#7AC0FA"
+                        android:backgroundTint="#7AC0FA"
+                        android:layout_below="@+id/txtStepslogo"/>
+
+                    <ListView
+                        android:id="@+id/listvSPO2datainv"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_below="@+id/SPO2Chart"
+                        android:layout_gravity="center"
+
+                        android:orientation="vertical"
+
+                        />
+
+                    <ListView
+                        android:id="@+id/listvSPO2data"
+                        android:layout_width="match_parent"
+                        android:layout_height="500dp"
+                        android:layout_below="@+id/SPO2Chart"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="45dp"
+                        android:orientation="vertical"
+
+                        >
+
+
+                    </ListView>
+
+
+
+
+
+
+
+
+                </RelativeLayout>
+
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

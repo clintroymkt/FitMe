@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="measure_fragment_array">
+        <item>demo.linktop.fmt.MonitorInfoOnlineFragment"</item>
+        <item>demo.linktop.fmt.BpOnlineFragment"</item>
+        <item>demo.linktop.fmt.BtOnlineFragment</item>
+        <item>demo.linktop.fmt.SPO2OnlineFragment</item>
+        <item>demo.linktop.fmt.ECGOnlineFragment</item>
+        <item>demo.linktop.fmt.HrvFragment</item>
+        <item>demo.linktop.fmt.BgFragment</item>
+        <item>demo.linktop.fmt.CholFragment</item>
+        <item>demo.linktop.fmt.UaFragment</item>
+    </string-array>
+
+    <!--***********************扫描蓝牙设备的设备名前缀白名单数组***********************************-->
+    <!--**************Prefix array of Bluetooth device names that can be scanned**************-->
+    <!--蓝牙设备扫描时以白名单内的字段作为设备名前缀的设备将被添加到蓝牙设备扫描列表中，其余的过滤。-->
+    <!--请在名单中设置所要扫描到的设备名前缀-->
+    <!--体温计的设备名前缀白名单-->
+    <string-array name="thermometer_dev_name_prefixes">
+        <item>"LinkTC"</item>
+        <item>"RuihTC"</item>
+    </string-array>
+    <!--健康检测仪的设备名前缀白名单-->
+    <string-array name="health_monitor_dev_name_prefixes">
+        <item>"HC02"</item>
+    </string-array>
+    <!--**********************************************************-->
+</resources>

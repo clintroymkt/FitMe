@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+
+    android:background="@drawable/white_background"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+
+    tools:context=".SleepPage">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#48647C"
+
+        />
+
+    <TextView
+        android:id="@+id/txtSleeplogo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="40sp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="sans-serif-light"
+        android:gravity="start"
+        android:text="Sleep"
+        android:textColor="@color/logoColorWhite"
+        android:textSize="34sp" />
+
+
+    <ScrollView
+        android:layout_marginTop="50dp"
+        android:id="@+id/stepScroller"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="2dp"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_edge_card">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+
+                android:background="@drawable/round_edge_card"
+                android:elevation="8dp">
+
+                <RelativeLayout
+                    android:id="@+id/inputFields"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+
+
+                    android:layout_alignParentEnd="true"
+                    android:elevation="2dp"
+                    android:padding="5sp">
+
+                    <TextView
+                        android:id="@+id/txtStepslogo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:text="Sleep Score"
+                        android:textColor="#48647C"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/totaltest"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtStepslogo"
+                        android:gravity="center"
+                        android:textSize="25sp" />
+
+                    <RelativeLayout
+                        android:id="@+id/sleepChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:gravity="center"
+                        android:layout_below="@+id/seperator">
+
+                        <TextView
+                            android:id="@+id/txtPageSleepScore"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginBottom="10dp"
+                            android:paddingStart="5sp"
+                            android:paddingEnd="5sp"
+
+                            android:scaleType="fitStart"
+                            android:src="@drawable/sleep"
+
+                            android:textAlignment="center"
+                            android:textColor="#48647C"
+                            android:textSize="50dp" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/sleepparagrapgh"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/sleepChart"
+                        android:fontFamily="@font/nunito_bold"
+                        android:gravity="center"
+                        android:text="Your Sleep Score Considers a combination of the total time you've slept as well as the quality of your sleep. This is the percentage of restful sleep minutes as well as light sleep minutes. For a better score the easiest way is to give yourself approximately 8 hours of sleep." />
+                    <View
+                        android:id="@+id/seperator"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/txtStepslogo"
+                        android:background="#7AC0FA"
+                        android:backgroundTint="#7AC0FA" />
+
+
+                    <ListView
+                        android:id="@+id/listvsleepdata"
+                        android:layout_width="match_parent"
+                        android:layout_height="500dp"
+                        android:layout_below="@+id/sleepparagrapgh"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="45dp"
+                        android:orientation="vertical"
+
+                        >
+
+
+                    </ListView>
+
+
+
+
+
+                </RelativeLayout>
+
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

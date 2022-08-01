@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OnlineActivity"
+    android:id="@+id/weblayout"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <ProgressBar
+        android:id="@+id/progress_Bar"
+        style="@style/Widget.MaterialComponents.CircularProgressIndicator"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:progress="20"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/swipeContainer"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+
+    <WebView
+        android:id="@+id/transWebview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/addInstrumentflt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10sp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:text="Add Instrument"
+            android:textColor="@color/colorWhite"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

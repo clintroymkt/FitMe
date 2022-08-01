@@ -1,0 +1,814 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.SystemicRev"
+    android:id="@+id/patient_drawer"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start"
+    android:background="@drawable/white_background">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/white_background">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="40dp"
+                android:paddingTop="20dp"
+                android:text="Systemic Review"
+                android:textColor="@color/black"
+                android:textSize="25sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+
+
+
+
+                <LinearLayout
+                    android:layout_gravity="center"
+                    android:layout_width="360dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="30dp"
+                    android:layout_marginTop="24dp"
+                    >
+
+
+                    <Spinner
+                        android:id="@+id/systemSpinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="70dp"
+                        android:layout_gravity="right"/>
+
+
+
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+
+                        android:layout_height="match_parent"
+                        android:scrollbars="horizontal|vertical"
+                        android:scrollbarStyle="outsideInset"
+                        android:fillViewport="true">
+
+                        <HorizontalScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scrollbars="horizontal|vertical">
+
+                            <TableLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+
+                                android:background="@drawable/white_background"
+                                android:scrollbars="horizontal">
+
+                                <TableRow
+                                    android:background="@color/purple_500"
+                                    android:layout_width="match_parent">
+
+                                    <TextView
+                                        android:layout_width="100dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="Subsystem"
+                                        android:textColor="@color/white"
+                                        android:padding="10sp"
+                                        android:textSize="14sp"
+                                        android:layout_weight="2"
+                                        android:gravity="center_horizontal"
+
+                                        />
+                                    <TextView
+                                        android:layout_width="100dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="Status"
+                                        android:textColor="@color/white"
+                                        android:padding="10sp"
+                                        android:textSize="14sp"
+                                        android:layout_weight="2"
+                                        android:gravity="center_horizontal"
+
+                                        />
+
+                                    <TextView
+                                        android:layout_width="100dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="2"
+                                        android:gravity="center_horizontal"
+                                        android:padding="10sp"
+                                        android:text="Assesment"
+                                        android:textColor="@color/white"
+                                        android:textSize="14sp"
+
+                                        />
+
+                                    <TextView
+                                        android:layout_width="100dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="2"
+                                        android:gravity="center_horizontal"
+                                        android:padding="10sp"
+                                        android:text="Action"
+                                        android:textColor="@color/white"
+                                        android:textSize="14sp"
+
+                                        />
+
+
+
+
+
+
+
+
+
+
+                                </TableRow>
+
+
+
+                                <TableRow>
+                                    <TextView
+                                        android:id="@+id/subsys1"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+
+
+                                        android:padding="10sp"
+                                        android:textSize="14sp"
+                                        android:layout_weight="2"
+                                        android:gravity="center_horizontal"
+
+                                        />
+                                    <TextView
+                                        android:id="@+id/status1"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+
+
+                                        android:padding="10sp"
+                                        android:textSize="14sp"
+                                        android:layout_weight="2"
+                                        android:gravity="center_horizontal"
+
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/assesment1"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+
+
+                                        android:padding="10sp"
+                                        android:textSize="14sp"
+                                        android:layout_weight="2"
+                                        android:gravity="center_horizontal"
+
+                                        />
+                                    <Button
+                                        android:id="@+id/assesBtn1"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="add"
+                                        android:layout_marginLeft="15dp"
+                                        android:padding="10sp"
+                                        android:textSize="14sp"
+                                        android:layout_weight="2"
+                                        android:gravity="center_horizontal"
+
+                                        />
+
+
+
+                                </TableRow>
+
+                                <TableRow>
+                                    <TextView
+                                        android:id="@+id/subsys2"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+
+
+                                        android:padding="10sp"
+                                        android:textSize="14sp"
+                                        android:layout_weight="2"
+                                        android:gravity="center_horizontal"
+
+                                        />
+                                    <TextView
+                                        android:id="@+id/status2"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+
+
+                                        android:padding="10sp"
+                                        android:textSize="14sp"
+                                        android:layout_weight="2"
+                                        android:gravity="center_horizontal"
+
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/assesment2"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+
+
+                                        android:padding="10sp"
+                                        android:textSize="14sp"
+                                        android:layout_weight="2"
+                                        android:gravity="center_horizontal"
+
+                                        />
+                                    <Button
+                                        android:id="@+id/assesBtn2"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="add"
+                                        android:layout_marginLeft="15dp"
+                                        android:padding="10sp"
+                                        android:textSize="14sp"
+                                        android:layout_weight="2"
+                                        android:gravity="center_horizontal"
+
+                                        />
+
+
+                                </TableRow>
+
+                                <TableRow>
+                                    <TextView
+                                        android:id="@+id/subsys3"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+
+
+                                        android:padding="10sp"
+                                        android:textSize="14sp"
+                                        android:layout_weight="2"
+                                        android:gravity="center_horizontal"
+
+                                        />
+                                    <TextView
+                                        android:id="@+id/status3"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+
+
+                                        android:padding="10sp"
+                                        android:textSize="14sp"
+                                        android:layout_weight="2"
+                                        android:gravity="center_horizontal"
+
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/assesment3"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+
+
+                                        android:padding="10sp"
+                                        android:textSize="14sp"
+                                        android:layout_weight="2"
+                                        android:gravity="center_horizontal"
+
+                                        />
+                                    <Button
+                                        android:id="@+id/assesBtn3"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="add"
+                                        android:layout_marginLeft="15dp"
+                                        android:padding="10sp"
+                                        android:textSize="14sp"
+                                        android:layout_weight="2"
+                                        android:gravity="center_horizontal"
+
+                                        />
+
+
+                                </TableRow>
+                                <TableRow>
+                                    <TextView
+                                        android:id="@+id/subsys4"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+
+
+                                        android:padding="10sp"
+                                        android:textSize="14sp"
+                                        android:layout_weight="2"
+                                        android:gravity="center_horizontal"
+
+                                        />
+                                    <TextView
+                                        android:id="@+id/status4"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+
+
+                                        android:padding="10sp"
+                                        android:textSize="14sp"
+                                        android:layout_weight="2"
+                                        android:gravity="center_horizontal"
+
+                                        />
+                                    <TextView
+                                        android:id="@+id/assesment4"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+
+
+                                        android:padding="10sp"
+                                        android:textSize="14sp"
+                                        android:layout_weight="2"
+                                        android:gravity="center_horizontal"
+
+                                        />
+                                    <Button
+                                        android:id="@+id/assesBtn4"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="Add"
+                                        android:layout_marginLeft="15dp"
+                                        android:padding="10sp"
+                                        android:textSize="14sp"
+                                        android:layout_weight="2"
+                                        android:gravity="center_horizontal"
+
+                                        />
+
+
+                                </TableRow>
+                                <TableRow>
+                                    <TextView
+                                        android:id="@+id/subsys5"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+
+
+                                        android:padding="10sp"
+                                        android:textSize="14sp"
+                                        android:layout_weight="2"
+                                        android:gravity="center_horizontal"
+
+                                        />
+                                    <TextView
+                                        android:id="@+id/status5"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+
+
+                                        android:padding="10sp"
+                                        android:textSize="14sp"
+                                        android:layout_weight="2"
+                                        android:gravity="center_horizontal"
+
+                                        />
+                                    <TextView
+                                        android:id="@+id/assesment5"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+
+
+                                        android:padding="10sp"
+                                        android:textSize="14sp"
+                                        android:layout_weight="2"
+                                        android:gravity="center_horizontal"
+
+                                        />
+                                    <Button
+                                        android:id="@+id/assesBtn5"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="add"
+                                        android:layout_marginLeft="15dp"
+                                        android:padding="10sp"
+                                        android:textSize="14sp"
+                                        android:layout_weight="2"
+                                        android:gravity="center_horizontal"
+
+                                        />
+
+
+                                </TableRow>
+                                <TableRow>
+                                    <TextView
+                                        android:id="@+id/subsys6"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+
+
+                                        android:padding="10sp"
+                                        android:textSize="14sp"
+                                        android:layout_weight="2"
+                                        android:gravity="center_horizontal"
+
+                                        />
+                                    <TextView
+                                        android:id="@+id/status6"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+
+
+                                        android:padding="10sp"
+                                        android:textSize="14sp"
+                                        android:layout_weight="2"
+                                        android:gravity="center_horizontal"
+
+                                        />
+                                    <TextView
+                                        android:id="@+id/assesment6"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+
+
+                                        android:padding="10sp"
+                                        android:textSize="14sp"
+                                        android:layout_weight="2"
+                                        android:gravity="center_horizontal"
+
+                                        />
+                                    <Button
+                                        android:id="@+id/assesBtn6"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="add"
+                                        android:layout_marginLeft="15dp"
+                                        android:padding="10sp"
+                                        android:textSize="14sp"
+                                        android:layout_weight="2"
+                                        android:gravity="center_horizontal"
+
+                                        />
+
+
+                                </TableRow>
+                                <TableRow>
+                                    <TextView
+                                        android:id="@+id/subsys7"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+
+
+                                        android:padding="10sp"
+                                        android:textSize="14sp"
+                                        android:layout_weight="2"
+                                        android:gravity="center_horizontal"
+
+                                        />
+                                    <TextView
+                                        android:id="@+id/status7"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+
+
+                                        android:padding="10sp"
+                                        android:textSize="14sp"
+                                        android:layout_weight="2"
+                                        android:gravity="center_horizontal"
+
+                                        />
+                                    <TextView
+                                        android:id="@+id/assesment7"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+
+
+                                        android:padding="10sp"
+                                        android:textSize="14sp"
+                                        android:layout_weight="2"
+                                        android:gravity="center_horizontal"
+
+                                        />
+                                    <Button
+                                        android:id="@+id/assesBtn7"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="add"
+                                        android:layout_marginLeft="15dp"
+                                        android:padding="10sp"
+                                        android:textSize="14sp"
+                                        android:layout_weight="2"
+                                        android:gravity="center_horizontal"
+
+                                        />
+
+
+                                </TableRow>
+                                <TableRow>
+                                    <TextView
+                                        android:id="@+id/subsys8"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+
+
+                                        android:padding="10sp"
+                                        android:textSize="14sp"
+                                        android:layout_weight="2"
+                                        android:gravity="center_horizontal"
+
+                                        />
+                                    <TextView
+                                        android:id="@+id/status8"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+
+
+                                        android:padding="10sp"
+                                        android:textSize="14sp"
+                                        android:layout_weight="2"
+                                        android:gravity="center_horizontal"
+
+                                        />
+                                    <TextView
+                                        android:id="@+id/assesment8"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+
+
+                                        android:padding="10sp"
+                                        android:textSize="14sp"
+                                        android:layout_weight="2"
+                                        android:gravity="center_horizontal"
+
+                                        />
+                                    <Button
+                                        android:id="@+id/assesBtn8"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="add"
+                                        android:layout_marginLeft="15dp"
+                                        android:padding="10sp"
+                                        android:textSize="14sp"
+                                        android:layout_weight="2"
+                                        android:gravity="center_horizontal"
+
+                                        />
+
+
+                                </TableRow>
+                                <TableRow>
+                                    <TextView
+                                        android:id="@+id/subsys9"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+
+
+                                        android:padding="10sp"
+                                        android:textSize="14sp"
+                                        android:layout_weight="2"
+                                        android:gravity="center_horizontal"
+
+                                        />
+                                    <TextView
+                                        android:id="@+id/status9"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+
+
+                                        android:padding="10sp"
+                                        android:textSize="14sp"
+                                        android:layout_weight="2"
+                                        android:gravity="center_horizontal"
+
+                                        />
+                                    <TextView
+                                        android:id="@+id/assesment9"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+
+
+                                        android:padding="10sp"
+                                        android:textSize="14sp"
+                                        android:layout_weight="2"
+                                        android:gravity="center_horizontal"
+
+                                        />
+                                    <Button
+                                        android:id="@+id/assesBtn9"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="add"
+                                        android:layout_marginLeft="15dp"
+                                        android:padding="10sp"
+                                        android:textSize="14sp"
+                                        android:layout_weight="2"
+                                        android:gravity="center_horizontal"
+
+                                        />
+
+
+                                </TableRow>
+                                <TableRow>
+                                    <TextView
+                                        android:id="@+id/subsys10"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+
+
+                                        android:padding="10sp"
+                                        android:textSize="14sp"
+                                        android:layout_weight="2"
+                                        android:gravity="center_horizontal"
+
+                                        />
+                                    <TextView
+                                        android:id="@+id/status10"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+
+
+                                        android:padding="10sp"
+                                        android:textSize="14sp"
+                                        android:layout_weight="2"
+                                        android:gravity="center_horizontal"
+
+                                        />
+                                    <TextView
+                                        android:id="@+id/assesment10"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+
+
+                                        android:padding="10sp"
+                                        android:textSize="14sp"
+                                        android:layout_weight="2"
+                                        android:gravity="center_horizontal"
+
+                                        />
+                                    <Button
+                                        android:id="@+id/assesBtn10"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="add"
+                                        android:layout_marginLeft="15dp"
+                                        android:padding="10sp"
+                                        android:textSize="14sp"
+                                        android:layout_weight="2"
+                                        android:gravity="center_horizontal"
+
+                                        />
+
+
+                                </TableRow>
+                                <TableRow>
+                                    <TextView
+                                        android:id="@+id/subsys11"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+
+
+                                        android:padding="10sp"
+                                        android:textSize="14sp"
+                                        android:layout_weight="2"
+                                        android:gravity="center_horizontal"
+
+                                        />
+                                    <TextView
+                                        android:id="@+id/status11"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+
+
+                                        android:padding="10sp"
+                                        android:textSize="14sp"
+                                        android:layout_weight="2"
+                                        android:gravity="center_horizontal"
+
+                                        />
+                                    <TextView
+                                        android:id="@+id/assesment11"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+
+
+                                        android:padding="10sp"
+                                        android:textSize="14sp"
+                                        android:layout_weight="2"
+                                        android:gravity="center_horizontal"
+
+                                        />
+                                    <Button
+                                        android:id="@+id/assesBtn11"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="add"
+                                        android:layout_marginLeft="15dp"
+                                        android:padding="10sp"
+                                        android:textSize="14sp"
+                                        android:layout_weight="2"
+                                        android:gravity="center_horizontal"
+
+                                        />
+
+
+                                </TableRow>
+                                <TableRow>
+                                    <TextView
+                                        android:id="@+id/subsys12"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+
+
+                                        android:padding="10sp"
+                                        android:textSize="14sp"
+                                        android:layout_weight="2"
+                                        android:gravity="center_horizontal"
+
+                                        />
+                                    <TextView
+                                        android:id="@+id/status12"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+
+
+                                        android:padding="10sp"
+                                        android:textSize="14sp"
+                                        android:layout_weight="2"
+                                        android:gravity="center_horizontal"
+
+                                        />
+                                    <TextView
+                                        android:id="@+id/assesment12"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+
+
+                                        android:padding="10sp"
+                                        android:textSize="14sp"
+                                        android:layout_weight="2"
+                                        android:gravity="center_horizontal"
+
+                                        />
+                                    <Button
+                                        android:id="@+id/assesBtn12"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="add"
+                                        android:layout_marginLeft="15dp"
+                                        android:padding="10sp"
+                                        android:textSize="14sp"
+                                        android:layout_weight="2"
+                                        android:gravity="center_horizontal"
+
+                                        />
+
+
+                                </TableRow>
+
+                            </TableLayout>
+
+                        </HorizontalScrollView>
+
+
+
+
+
+                    </ScrollView>
+
+                </RelativeLayout>
+
+
+
+
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+   <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/nav_view"
+        app:headerLayout="@layout/nav_header_main"
+        app:menu="@menu/patient_menu"
+        android:layout_gravity="start"/>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

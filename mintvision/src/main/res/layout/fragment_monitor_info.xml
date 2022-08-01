@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="androidx.databinding.ObservableField" />
+
+        <variable
+            name="frag"
+            type="demo.minttihealth.fmt.MonitorInfoFragment" />
+
+        <variable
+            name="btnText"
+            type="ObservableField&lt;String&gt;" />
+
+        <variable
+            name="power"
+            type="ObservableField&lt;String&gt;" />
+
+        <variable
+            name="id"
+            type="ObservableField&lt;String&gt;" />
+
+        <variable
+            name="key"
+            type="ObservableField&lt;String&gt;" />
+
+        <variable
+            name="softVer"
+            type="ObservableField&lt;String&gt;" />
+
+        <variable
+            name="hardVer"
+            type="ObservableField&lt;String&gt;" />
+
+        <variable
+            name="firmVer"
+            type="ObservableField&lt;String&gt;" />
+
+    </data>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <RadioGroup
+                android:id="@+id/radioG"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/way_of_connecting_device"
+                    android:textSize="12sp" />
+
+                <RadioButton
+                    android:id="@+id/radioB0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/directly_connection"
+                    android:textSize="12sp" />
+
+                <RadioButton
+                    android:id="@+id/radioB1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/select_a_device_to_connect_from_the_scan_list"
+                    android:textSize="12sp" />
+            </RadioGroup>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{frag::clickConnect}"
+                android:text="@{btnText}"
+                android:textAllCaps="false"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{@string/device_power_level(power)}" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{@string/device_id(id)}" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{@string/device_key(key)}" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{@string/device_software_ver(softVer)}" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{@string/device_hardware_ver(hardVer)}" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{@string/device_firmware_ver(firmVer)}" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{frag::clickSetUserInfo}"
+                    android:text="@string/setting_user_information"
+                    android:textAllCaps="false" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

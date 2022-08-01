@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) Microsoft Corporation. All rights reserved.
+  ~ Licensed under the MIT License.
+  -->
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="false">
+        <shape>
+            <solid android:color="#69797E"/>
+            <corners android:radius="2dp" />
+        </shape>
+    </item>
+    <item>
+        <ripple android:color="#004E8C">
+            <item android:id="@android:id/mask" android:drawable="@android:color/white" />
+            <item>
+                <shape>
+                    <solid android:color="@color/purple_500"/>
+                    <corners android:radius="2dp" />
+                </shape>
+            </item>
+        </ripple>
+    </item>
+</selector>

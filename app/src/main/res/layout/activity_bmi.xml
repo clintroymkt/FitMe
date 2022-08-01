@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BmiActivity">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_heart_monitor" />
+
+    <TextView
+        android:id="@+id/txtBmi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="20sp"
+
+        android:fontFamily="sans-serif-light"
+        android:gravity="start"
+        android:inputType="number"
+        android:text="0"
+        android:textColor="@color/logoColorWhite"
+        android:textSize="120dp" />
+
+    <TextView
+        android:id="@+id/txtBmiUnit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtBmi"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="40sp"
+        android:fontFamily="sans-serif-light"
+        android:gravity="start"
+        android:text="BMI Score"
+        android:textColor="@color/logoColorWhite"
+        android:textSize="34sp" />
+
+    <TextView
+        android:id="@+id/txtBmiRemark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtBmiUnit"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="40sp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="sans-serif-light"
+        android:gravity="start"
+        android:text="--"
+        android:textColor="@color/logoColorWhite"
+        android:textSize="34sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/txtBmiRemark"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-5dp"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_edge_card">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="20dp"
+                android:background="@drawable/round_edge_card"
+                android:elevation="8dp">
+
+                <RelativeLayout
+                    android:id="@+id/inputFields"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+
+                    android:padding="20sp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true">
+
+                    <TextView
+                        android:id="@+id/txtEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Height"
+                        android:textStyle="bold"
+                        android:textColor="@color/logoColorDarkCyan"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"/>
+
+                    <EditText
+                        android:id="@+id/txtHeight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter Height"
+                        android:paddingTop="20sp"
+                        android:paddingEnd="20sp"
+                        android:inputType="textEmailAddress"
+                        android:textSize="18sp"
+                        android:paddingBottom="10dp"
+                        android:textColor="@color/logoColorBlack"
+                        android:background="@color/logoColorWhite"
+                        android:layout_below="@+id/txtEmail"/>
+
+                    <View
+                        android:id="@+id/seperator"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/logoColorDarkCyan"
+                        android:backgroundTint="@color/logoColorDarkCyan"
+                        android:layout_below="@+id/txtHeight"/>
+
+                    <TextView
+                        android:id="@+id/txtPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Weight"
+                        android:textStyle="bold"
+                        android:layout_marginTop="20sp"
+                        android:layout_below="@+id/seperator"
+                        android:textColor="@color/logoColorDarkCyan"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"/>
+
+                    <EditText
+                        android:id="@+id/txtWeight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter Weight"
+                        android:paddingTop="20sp"
+                        android:paddingBottom="10dp"
+                        android:paddingEnd="10dp"
+                        android:inputType="textPassword"
+                        android:textSize="18sp"
+                        android:textColor="@color/logoColorBlack"
+                        android:background="@color/logoColorWhite"
+                        android:layout_below="@+id/txtPassword" />
+
+                    <View
+                        android:id="@+id/seperator2"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/logoColorDarkCyan"
+                        android:backgroundTint="@color/logoColorDarkCyan"
+                        android:layout_below="@+id/txtWeight"/>
+
+                </RelativeLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/calculateBmiBtn"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/inputFields"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    app:cardCornerRadius="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_heart_monitor"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center"
+                        android:text="Calculate"
+                        android:textColor="@color/logoColorWhite"
+                        android:textSize="18sp" />
+
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

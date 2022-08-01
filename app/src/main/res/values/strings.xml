@@ -1,0 +1,163 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">FitMe</string>
+    <string name="hello">Hello</string>
+    <string name="dr">Dr.</string>
+    <string name="search_patient_records">Search Patient Records</string>
+    <string name="patient_records">Patient Records</string>
+    <string name="virtual_cosultancy">Virtual Cosultancy</string>
+    <string name="virtual_consultancy">Virtual Consultancy</string>
+    <string name="trending">TRENDING</string>
+    <string name="home">Home</string>
+    <string name="settings">Settings</string>
+    <string name="account">Account</string>
+    <string name="incoming_call">Incoming Call</string>
+    <string name="outgoing_call">Outgoing Call</string>
+    <string name="start_scan">Start scan</string>
+    <string name="stop_scan">Stop scan</string>
+    <string name="connect">Connect</string>
+    <string name="disconnect">Disconnect</string>
+    <string name="echo_mode">"Auscultation mode : "</string>
+    <string name="heart_rate">"Heart rate : "</string>
+    <string name="power">"Power : "</string>
+    <string name="start_receive_data">Receive data</string>
+    <string name="stop_receive_data">Stop receive</string>
+    <string name="switch_mode">Switch mode</string>
+    <string name="mac_address_empty">device address empty</string>
+    <string name="ble_connect_failed">Connect failed</string>
+    <string name="ble_connecting">Connecting</string>
+    <string name="ble_update_params">Updating parameters</string>
+    <string name="ble_update_params_failed">Parameter update failed</string>
+    <string name="ble_enable_bluetooth">Please turn on Bluetooth first</string>
+    <string name="ble_device_not_connect">device not connected</string>
+    <string name="firmware_update">Firmware update</string>
+    <string name="disconnect_first">Disconnect first</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="proccol1">Code</string>
+    <string name="proccol2">Description</string>
+    <string name="proccol3">Notes</string>
+
+    <string name="no_support_ble">not support BLE</string>
+    <string name="start_bscan">start scan</string>
+    <string name="stop_bscan">stop</string>
+
+    <string name="hs_upgrade">HS Upgrade</string>
+
+    <string name="connect_state">Connect State:</string>
+
+    <string name="state_connecting">Contecting</string>
+    <string name="state_connected">Contected</string>
+    <string name="state_disconnected">Discontected</string>
+
+    <string name="string_disconnect">disconnect</string>
+    <string name="string_connect">connect</string>
+
+    <string name="sync_time" translatable="false">Sync Time</string>
+    <string name="query_battery" translatable="false">Query Battery</string>
+    <string name="query_firmware" translatable="false">Query Firmware</string>
+    <string name="check_firmware" translatable="false">Check Firmware</string>
+    <string name="firmware_upgrade" translatable="false">Firmware Upgrade</string>
+    <string name="firmware_fix" translatable="false">Firmware Fix</string>
+    <string name="send_user_info" translatable="false">Send User Info</string>
+    <string name="sync_step" translatable="false">Sync Step</string>
+    <string name="step" translatable="false">%d</string>
+    <string name="distance" translatable="false">%d</string>
+    <string name="calorie" translatable="false">%d</string>
+    <string name="sync_sleep" translatable="false">Sync Sleep</string>
+    <string name="restful" translatable="false">%d</string>
+    <string name="light" translatable="false">%d</string>
+    <string name="send_metric_system" translatable="false">Send Metric System</string>
+    <string name="query_metric_system" translatable="false">Query Metric System</string>
+    <string name="send_time_system" translatable="false">Send Time System</string>
+    <string name="query_time_system" translatable="false">Query Time System</string>
+    <string name="send_quick_view" translatable="false">Send Quick View</string>
+    <string name="query_quick_view" translatable="false">Query Quick View</string>
+    <string name="send_goal_step" translatable="false">Send Goal Step</string>
+    <string name="query_goal_step" translatable="false">Query Goal Step</string>
+    <string name="send_alarm_clock">Send Alarm Clock</string>
+    <string name="query_alarm_clock">Query All Clock</string>
+    <string name="send_dominant_hand">Send Dominant Hand</string>
+    <string name="query_dominant_hand">Query Dominant Hand</string>
+    <string name="send_device_language">Send Device Language</string>
+    <string name="query_device_language">Query Device Language</string>
+    <string name="send_other_message">Send Other Message</string>
+    <string name="query_other_message">Query Other Message</string>
+    <string name="send_sedentary_reminder">Send Sedentary Reminder</string>
+    <string name="query_sedentary_reminder">Query Sedentary Reminder</string>
+    <string name="send_display_watch_face">Send Watch Face</string>
+    <string name="query_display_watch_face">Query Watch Face</string>
+    <string name="send_breathing_light">Send Breathing Light</string>
+    <string name="query_breathing_light">Query Breathing Light</string>
+    <string name="send_watch_face_layout">Send Watch Face Layout</string>
+    <string name="query_watch_face_layout">Query Watch Face Layout</string>
+    <string name="find_band">Find Band</string>
+    <string name="send_message">Send Message</string>
+    <string name="music_control">Music Control</string>
+    <string name="start_measure_heart_rate">Start Measure Heart Rate</string>
+    <string name="stop_measure_heart_rate">Stop Measure Heart Rate</string>
+    <string name="sync_last_heart_rate">Sync Last Heart Rate</string>
+    <string name="open_24_hour_hreat_rate">Open 24Hour Hreat Rate</string>
+    <string name="close_24_hour_hreat_rate">Close 24Hour Hreat Rate</string>
+    <string name="query_today_hreat_rate">Query Today Hreat Rate</string>
+    <string name="query_yesterday_hreat_rate">Query Yesterday Hreat Rate</string>
+    <string name="query_movement_hreat_rate">Query Movement Hreat Rate</string>
+    <string name="string_heart_rate" translatable="false">%d</string>
+    <string name="watch_blood_pressure" tools:ignore="MissingTranslation">%1$d/%2$d</string>
+    <string name="blood_oxygen">%d</string>
+    <string name="start_measure_blood_pressure">Start Measure Blood Pressure</string>
+    <string name="stop_measure_blood_pressure">Stop Measure Blood Pressure</string>
+    <string name="send_device_version">Send Device Version</string>
+    <string name="query_device_version">Query Device Version</string>
+    <string name="sync_past_step">Sync Past Step</string>
+    <string name="sync_past_sleep">Sync Past Sleep</string>
+    <string name="send_device_function">Send Device Function</string>
+    <string name="query_device_function">Query Device Function</string>
+    <string name="send_today_weather">Send Today Weather</string>
+    <string name="send_future_weather">Send Future Weather</string>
+    <string name="start_measure_blood_oxygen">Start Measure Blood Oxygen</string>
+    <string name="stop_measure_blood_oxygen">Stop Measure Blood Oxygen</string>
+    <string name="start_measure_ecg">Start Measure ECG</string>
+    <string name="stop_measure_ecg">Stop Measure ECG</string>
+    <string name="query_last_ecg">Query Last ECG</string>
+
+    <string name="query_today_steps_category">Query Today Steps Category</string>
+    <string name="query_yesterday_steps_category">Query Yesterday Steps Category</string>
+
+    <string name="switch_background">Switch Background</string>
+    <string name="query_support_watch_face">Query support watch face</string>
+    <string name="Show_fatigue_driving">Show fatigue driving</string>
+    <string name="query_watch_face">Query watch face</string>
+
+
+    <string name="dfu_status_download_starting">Starting Download</string>
+    <string name="dfu_status_download_complete">Downloaded Complete</string>
+    <string name="dfu_status_starting">Starting DFU</string>
+    <string name="dfu_status_uploading_part" formatted="false">Uploading part %d</string>
+    <string name="dfu_status_completed">Done</string>
+    <string name="dfu_status_aborted">Aborted</string>
+    <string name="dfu_status_error_msg">DFU process failed.</string>
+
+
+    <string name="output_header_template" translatable="false">Heart rate raw data as of %s</string>
+    <string name="output_body_template" translatable="false">Final result:\n%s\nNormalized results and detected peaks:\n%s</string>
+    <string name="output_detected_peaks_header" translatable="false">Detected Peaks:</string>
+    <string name="send_output_to" translatable="false">Send output to:</string>
+    <string name="separator" translatable="false">,</string>
+    <string name="row_separator" translatable="false">\n</string>
+    <string name="raw_values" translatable="false">Measurements (Timestamp, Value)</string>
+    <string name="share_button_description" translatable="false">Share</string>
+    <string name="cameraPermissionRequired" translatable="false">Camera permission is required for this application to work.</string>
+    <string name="noFlashWarning" translatable="false">Measurement without flash is less reliable.</string>
+    <string name="new_measurement" translatable="false">New Measurement</string>
+    <string name="export_result" translatable="false">Export Result</string>
+    <string name="export_details" translatable="false">Export Details</string>
+    <plurals name="measurement_output_template">
+        <item quantity="zero">Pulse: %2.1f (%d cycle in %2.1f seconds)</item>
+        <item quantity="one">Pulse: %2.1f (%d cycle in %2.1f seconds)</item>
+        <item quantity="other">Pulse: %2.1f (%d cycles in %2.1f seconds)</item>
+    </plurals>
+
+</resources>

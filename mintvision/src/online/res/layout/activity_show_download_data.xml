@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context="demo.minttihealth.activity.ShowDownloadDataActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="请选择要下载的数据类型"
+        android:textColor="@android:color/black" />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:entries="@array/data_type"
+        android:spinnerMode="dropdown" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:onClick="clickDownload"
+        android:text="点击下载" />
+
+    <demo.minttihealth.widget.CustomRecyclerView
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="LinearLayoutManager" />
+
+</LinearLayout>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorBackground"
+    tools:context="demo.minttihealth.activity.ThermometerActivity">
+
+    <data>
+
+        <import type="androidx.databinding.ObservableField" />
+
+        <import type="android.view.View" />
+
+        <variable
+            name="stopScanTempBtnShowFlag"
+            type="androidx.databinding.ObservableBoolean" />
+
+        <variable
+            name="connectBtnShowFlag"
+            type="androidx.databinding.ObservableBoolean" />
+
+        <variable
+            name="tempText"
+            type="ObservableField&lt;String&gt;" />
+
+        <variable
+            name="btnText"
+            type="ObservableField&lt;String&gt;" />
+
+        <variable
+            name="listCount"
+            type="androidx.databinding.ObservableInt" />
+
+        <variable
+            name="recyclerAdapter"
+            type="androidx.recyclerview.widget.RecyclerView.Adapter" />
+
+        <variable
+            name="itemClickListener"
+            type="demo.minttihealth.widget.CustomRecyclerView.RecyclerItemClickListener" />
+
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:theme="@style/toolbar_theme">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="52dp" />
+
+            <Button
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="clickConnect"
+                android:text="@{btnText}"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/available_device"
+                android:textColor="@android:color/white" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp">
+
+                <demo.minttihealth.widget.CustomRecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    app:layoutManager="LinearLayoutManager"
+                    app:onItemClickListener="@{itemClickListener}"
+                    app:recyclerAdapter="@{recyclerAdapter}" />
+
+                <TextView
+                    android:id="@+id/tv_scanning_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="12dp"
+                    android:text="@string/no_device"
+                    android:textSize="12sp"
+                    android:visibility="@{listCount == 0 ? View.VISIBLE : View.GONE}" />
+            </FrameLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="68dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.1"
+                        android:text="@{tempText}" />
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.9"
+                        android:onClick="clickStopScanTemp"
+                        android:text="点击停止扫描温度"
+                        android:visibility="@{stopScanTempBtnShowFlag ? View.VISIBLE:View.GONE}" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+</layout>

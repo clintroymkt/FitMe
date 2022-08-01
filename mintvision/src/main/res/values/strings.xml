@@ -1,0 +1,124 @@
+<resources>
+    <string name="app_name">Vision Health Device SDK</string>
+    <string name="btn_logout_text">If it is useful to synchronize measurement data, click here to log in to Lintkop server.</string>
+    <string name="btn_login_text">Signed in, click to exit</string>
+    <string name="sbp_value">SBP: %1$smmHg</string>
+    <string name="dbp_value">DBP: %1$smmHg</string>
+    <string name="spo2h_value">SpO₂: %1$s%%</string>
+    <string name="hr_value">Heart rate: %1$s BPM</string>
+    <string name="rr_interval_value">R-R interval: %1$d ms</string>
+    <string name="rr_max_value">R-R max: %1$d ms</string>
+    <string name="rr_min_value">R-R min: %1$d ms</string>
+    <string name="hrv_value">HRV: %1$s ms</string>
+    <string name="mood_value">Mood: %1$s</string>
+    <string name="rr_value">Respiratory rate: %1$s BPM</string>
+    <string name="ecg_sq">Signal quality: %s</string>
+    <string name="finger_detection">Finger detection: %s</string>
+    <string name="duration_value">Duration: %1$s s</string>
+    <string name="paper_speed">Paper Speed</string>
+    <string name="paper_speed_value">Paper Speed: %1$s</string>
+    <string name="gain">Gain</string>
+    <string name="gain_value">Gain: %1$s</string>
+    <string name="leak_and_check">There is a leak. Please check the gas path.</string>
+    <string name="measurement_void">Please keep quiet during the measurement.This measurement is invalid.</string>
+    <string name="close">Close</string>
+    <string name="temp_unit_f" translatable="false">℉</string>
+    <string name="temp_unit_c" translatable="false">℃</string>
+    <string name="ask_for_verify_code">Please ask the administrator(%1$s) for a verification code:</string>
+
+    <string name="gender_value">Gender: %1$s</string>
+    <string name="age_value">Age: %1$d</string>
+    <string name="height_value">Height: %1$d cm</string>
+    <string name="weight_value">Weight: %1$d kg</string>
+    <string name="bs_result" translatable="false">%1$.1f mmol/L</string>
+    <string name="ua_result" translatable="false">%1$.1f μmol/L</string>
+    <string name="health_devices">Health devices:</string>
+    <string name="health_monitor">Health Monitor</string>
+    <string name="thermometer">Thermometer</string>
+    <string name="basic_info">Basic Information</string>
+    <string name="blood_pressure">Blood Pressure</string>
+    <string name="blood_glucose">Blood Glucose</string>
+    <string name="body_temperature">Body Temperature</string>
+    <string name="spo2">SpO₂</string>
+    <string name="ecg">ECG</string>
+    <string name="way_of_connecting_device">Way of connecting device:</string>
+    <string name="directly_connection">Connect directly</string>
+    <string name="select_a_device_to_connect_from_the_scan_list">Select from list</string>
+    <string name="turn_on_bluetooth">Turn on Bluetooth</string>
+    <string name="connect">Connect</string>
+    <string name="connecting">Connecting…</string>
+    <string name="disconnect">Disconnect.</string>
+    <string name="device_power_level">Device power level: %1$s</string>
+    <string name="device_id">Device ID: %1$s</string>
+    <string name="device_key">Device KEY: %1$s</string>
+    <string name="device_software_ver">Device software version: %1$s</string>
+    <string name="device_hardware_ver">Device hardware version: %1$s</string>
+    <string name="device_firmware_ver">Device firmware version: %1$s</string>
+    <string name="login">Login</string>
+    <string name="start_measuring">Start measuring</string>
+    <string name="ecg_settings">ECG Settings</string>
+    <string name="click_here_to_see_the_full_ecg">Click here to see the full ECG.</string>
+    <string name="available_device">Available devices</string>
+    <string name="no_device">No devices</string>
+    <string name="scan">Scanning</string>
+    <string name="scanning_click_stop">Scanning, Click to stop.</string>
+    <string name="scanning">Scanning…</string>
+    <string name="turn_on_location">Turn on location</string>
+    <string name="unable_to_get_qr_code">Unable to get QR code because the device is not connected to the phone by Bluetooth.</string>
+    <string name="charging">Charging.Please wait.</string>
+    <string name="device_disconnect">Device disconnect</string>
+    <string name="measuring">Measuring,click again to stop.</string>
+    <string name="get_verification_code">Get verification code</string>
+    <string name="account">Account</string>
+    <string name="password">Password</string>
+    <string name="register_or_reset_psw">Register or Reset Password</string>
+    <string name="reset_psw">Reset Password</string>
+    <string name="register">Register</string>
+    <string name="verification_code">Verification code</string>
+    <string name="login_success">Login success.</string>
+    <string name="network_connection_error">Network connection error.</string>
+    <string name="incorrect_acc_or_psw">Incorrect account or password</string>
+    <string name="test_paper_inserted">Test strip inserted.</string>
+    <string name="test_paper_ready">Please drop the blood sample into the test paper.</string>
+    <string name="test_paper_value_calculating">A blood sample has been collected and the value is being calculated. Please wait.</string>
+    <string name="test_paper_result">Result :</string>
+    <string name="test_paper_is_not_inserted">The test paper is not inserted.</string>
+    <string name="test_paper_is_used">The test paper has been used, please replace it with a new one.</string>
+    <string name="test_paper_out">The test paper was pulled out during the test.</string>
+    <string name="collecting_sample_timeout">Collecting sample timeout</string>
+    <string name="calculate_bg_value_timeout">Calculate sample value timeout</string>
+    <string name="bp_result_error">The blood result error, Please retry!</string>
+
+    <string name="tips">Tips</string>
+    <string name="no_finger_for_test_spo2">No finger was detected on the SpO₂ sensor.</string>
+    <string name="reading_storage_data_file">Reading storage data file</string>
+    <string name="show_raw_data">Display raw data</string>
+    <string name="uric_acid">Uric Acid</string>
+    <string name="cholesterol">Cholesterol</string>
+
+    <string name="lost_data_pkg" translatable="false">丢包数：%d</string>
+    <string name="manufacturer_yi_cheng">Yi Cheng</string>
+    <string name="manufacturer_bene_check">Bene Check</string>
+    <string name="finger_detection_ok">Fingers detected by ECG sensor</string>
+    <string name="finger_detection_fail">Make sure your fingers are on the sensor</string>
+    <string name="mood_desc_calm">Calm</string>
+    <string name="mood_desc_relaxed">Relaxed</string>
+    <string name="mood_desc_balanced">Balanced</string>
+    <string name="mood_desc_motivated">Motivated</string>
+    <string name="mood_desc_agitated">Agitated/Anxiety/Excited</string>
+    <string name="setting_user_information">Setting user information</string>
+    <string name="username">Username</string>
+    <string name="gender">Gender</string>
+    <string name="female">Female</string>
+    <string name="male">Male</string>
+    <string name="birthday">Birthday</string>
+    <string name="height">Height (cm)</string>
+    <string name="weight">Weight (kg)</string>
+
+    <string name="test_paper_measurement_steps_dsc">Please follow the steps below to make a measurement!</string>
+    <string name="blood_glucose_measurement_step1">Step1.\nPlease select the manufacturer of the test paper.</string>
+    <string name="blood_glucose_measurement_step2">Step2.\nPlease select the check code of the test paper.</string>
+    <string name="blood_glucose_measurement_step3">Step3.\nAfter inserting the test paper into the test port on the device, click the button to start the measurement.</string>
+    <string name="chol_and_ua_measurement_step1">Step1.\nPlease select the check code of the test paper.</string>
+    <string name="chol_and_ua_measurement_step2">Step2.\nAfter inserting the test paper into the test port on the device, click the button to start the measurement.</string>
+</resources>

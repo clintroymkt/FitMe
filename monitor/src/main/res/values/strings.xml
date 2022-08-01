@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Monitor Demo</string>
+
+
+
+    <string name="bluetooth_title">Bluetooth</string>
+    <string name="search_devices">Search Devices</string>
+</resources>

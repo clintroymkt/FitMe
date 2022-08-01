@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="measure_fragment_array">
+        <item>demo.minttihealth.fmt.MonitorInfoFragment"</item>
+        <item>demo.minttihealth.fmt.BpFragment"</item>
+        <item>demo.minttihealth.fmt.BtFragment</item>
+        <item>demo.minttihealth.fmt.SPO2Fragment</item>
+        <item>demo.minttihealth.fmt.ECGFragment</item>
+        <item>demo.minttihealth.fmt.BgFragment</item>
+        <item>demo.minttihealth.fmt.CholFragment</item>
+        <item>demo.minttihealth.fmt.UaFragment</item>
+    </string-array>
+
+    <string-array name="data_type">
+        <item>"血压（BP）"</item>
+        <item>"体温（BT）"</item>
+        <item>"血氧（SpO₂）"</item>
+        <item>"心电图（ECG）"</item>
+    </string-array>
+
+    <!--***********************扫描蓝牙设备的设备名前缀白名单数组***********************************-->
+    <!--**************Prefix array of Bluetooth device names that can be scanned**************-->
+    <!--蓝牙设备扫描时以白名单内的字段作为设备名前缀的设备将被添加到蓝牙设备扫描列表中，其余的过滤。-->
+    <!--请在名单中设置所要扫描到的设备名前缀-->
+    <!--体温计的设备名前缀白名单-->
+    <string-array name="thermometer_dev_name_prefixes">
+        <item>"LinkTC"</item>
+        <item>"RuihTC"</item>
+    </string-array>
+    <!--健康检测仪的设备名前缀白名单-->
+    <string-array name="health_monitor_dev_name_prefixes">
+        <item>"HC02"</item>
+    </string-array>
+    <!--**********************************************************-->
+</resources>

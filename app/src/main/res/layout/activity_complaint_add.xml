@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.ComplaintAdd"
+    android:background="@drawable/white_background">
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/white_background">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="40dp"
+                android:paddingTop="20dp"
+                android:text="Add New Complaint:"
+                android:textColor="@color/black"
+                android:textSize="25sp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="40dp"
+                android:paddingTop="20dp"
+                android:text="Enter Information Below:"
+                android:textColor="@color/black"
+                android:textSize="25sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:background="@drawable/white_background"
+                android:textColorHint="@color/highlightColor">
+
+
+
+                <EditText
+                    android:id="@+id/add_notes"
+                    android:paddingTop="20dp"
+                    android:layout_width="360dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/white_background"
+                    android:ems="10"
+                    android:textColor="@color/black"
+                    android:paddingLeft="40dp"
+                    android:hint="Description:"
+                    android:inputType="textMultiLine"
+                    android:layout_gravity="center"/>
+
+
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:background="@drawable/white_background"
+                android:textColorHint="@color/highlightColor">
+
+
+
+                <EditText
+
+                    android:paddingTop="20dp"
+                    android:layout_width="360dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/white_background"
+                    android:ems="10"
+                    android:textColor="@color/black"
+                    android:paddingLeft="40dp"
+                    android:hint="How Long:"
+                    android:inputType="textMultiLine"
+                    android:layout_gravity="center"/>
+
+
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Measure"
+
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu">
+
+                <AutoCompleteTextView
+                    android:id="@+id/autoCompleteComplaint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"/>
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btnsaveComplaint"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="77dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/button_background"
+                android:text="Save"
+                android:textColor="#ffffff"
+                android:textSize="15dp" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="demo.minttihealth.fmt.BpFragment" />
+
+        <variable
+            name="content"
+            type="demo.minttihealth.fmt.MeasureFragment" />
+
+        <variable
+            name="model"
+            type="demo.minttihealth.bean.Bp" />
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="@{@string/sbp_value(model.sbp)}"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="@{@string/dbp_value(model.dbp)}"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="@{@string/hr_value(model.hr)}"
+            android:textSize="20sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <!-- <Button
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:onClick="@{((BpFragment)content)::clickSaveData}"
+             android:text="Save Data"
+             android:textAllCaps="false"
+             android:textSize="12sp" />-->
+
+        <Button
+            android:id="@+id/btn_measure"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{content::clickMeasure}"
+            android:text="@string/start_measuring"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+</layout>

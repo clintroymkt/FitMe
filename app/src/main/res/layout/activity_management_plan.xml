@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.ManagementPlan"
+    android:background="@drawable/white_background">
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="40dp"
+                android:paddingTop="20dp"
+                android:text="Management Plan"
+                android:textColor="@color/black"
+                android:textSize="25sp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="40dp"
+                android:paddingTop="20dp"
+                android:text="Patient:"
+                android:textColor="@color/black"
+                android:textSize="25sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:background="@color/white"
+            android:textColorHint="@color/highlightColor">
+
+
+
+            <EditText
+                android:id="@+id/add_notes"
+                android:paddingTop="20dp"
+                android:layout_width="360dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/white_background"
+                android:ems="10"
+                android:textColor="@color/black"
+                android:paddingLeft="40dp"
+                android:hint="Write plan here"
+                android:inputType="textMultiLine"
+                android:layout_gravity="center"/>
+
+            <Button
+                android:id="@+id/btnsavePlan"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="77dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/button_background"
+                android:text="Save Plan"
+                android:textColor="#ffffff"
+                android:textSize="15dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

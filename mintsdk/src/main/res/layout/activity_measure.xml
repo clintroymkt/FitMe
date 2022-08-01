@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rootLayout"
+    android:orientation="vertical"
+    tools:context="com.kl.minttisdkdemo.MeasureActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/hint_power"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/power"
+        android:textColor="#000000"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:id="@+id/tv_power"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/hint_power"
+        android:layout_alignBaseline="@+id/hint_power"
+        android:layout_marginLeft="5dp"
+        />
+    <TextView
+        android:id="@+id/hint_heart_rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/heart_rate"
+        android:textColor="#000000"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/hint_power"/>
+    <TextView
+        android:id="@+id/tv_heart_rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/hint_heart_rate"
+        android:layout_alignBaseline="@+id/hint_heart_rate"
+        android:layout_marginLeft="5dp"
+
+        />
+
+    <TextView
+        android:id="@+id/hint_echo_mode_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/echo_mode"
+        android:textColor="#000000"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/hint_heart_rate"/>
+
+    <TextView
+        android:id="@+id/tv_echo_mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/hint_echo_mode_text"
+        android:layout_alignBaseline="@+id/hint_echo_mode_text"
+        android:layout_marginLeft="5dp"
+        />
+
+
+
+    <FrameLayout
+        android:id="@+id/stethoWave"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+
+        android:layout_marginTop="25dp">
+
+        <com.kl.minttisdkdemo.base.view.GridView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+        <com.kl.minttisdkdemo.base.view.AudioWaveView
+            android:id="@+id/wave_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+
+    </FrameLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_below="@+id/stethoWave">
+                <VideoView
+
+                    android:id="@+id/videoView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:visibility="invisible"/>
+
+                </RelativeLayout>
+            <ToggleButton
+                android:id="@+id/toggleButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textOff="Record"
+                android:textOn="Stop"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/colorAccent"
+                />
+            <Button
+                android:id="@+id/shareRecBtn"
+                android:background="@color/colorPrimaryDark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Share Recording"
+                android:layout_marginBottom="80dp"
+                android:layout_gravity="center"/>
+
+
+
+
+
+
+
+
+    <Button
+        android:id="@+id/btn_connect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/connect"
+        android:textAllCaps="false"
+        android:layout_alignParentBottom="true"
+        />
+    <Button
+        android:id="@+id/btn_receive_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/start_receive_data"
+        android:textAllCaps="false"
+        android:layout_above="@+id/btn_connect"
+        />
+    <Button
+        android:id="@+id/btn_echo_mode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/switch_mode"
+        android:textAllCaps="false"
+        android:layout_above="@+id/btn_receive_data"
+        />
+
+
+    <Button
+        android:id="@+id/btn_firmware_update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/firmware_update"
+        android:layout_above="@+id/btn_echo_mode"
+        android:textAllCaps="false"
+        android:visibility="gone"/>
+<!--    <Button-->
+<!--        android:id="@+id/btn_read_power"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="读取电量"-->
+<!--        android:layout_above="@+id/btn_firmware_update"-->
+<!--        android:textAllCaps="false" />-->
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="androidx.databinding.ObservableField" />
+
+        <import type="com.linktop.constant.Constants" />
+
+        <import type="demo.minttihealth.fmt.ECGFragment" />
+
+        <variable
+            name="content"
+            type="demo.minttihealth.fmt.MeasureFragment" />
+
+        <variable
+            name="model"
+            type="demo.minttihealth.bean.ECG" />
+
+        <variable
+            name="event"
+            type="androidx.databinding.ObservableArrayMap&lt;Integer,String&gt;" />
+
+        <variable
+            name="toggleCountDown"
+            type="androidx.databinding.ObservableBoolean" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:background="@color/colorPrimary"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="@{((ECGFragment)content)::openECGLarge}">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center"
+                        android:text="@string/click_here_to_see_the_full_ecg"
+                        android:textColor="#50FF4081"
+                        android:textSize="32sp" />
+
+                    <demo.minttihealth.widget.EcgBackgroundView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:largeGridColor="@color/colorECGLargeGrid"
+                        app:smallGridColor="@color/colorECGSmallGrid" />
+
+                    <demo.minttihealth.widget.WaveSurfaceView
+                        android:id="@+id/wave_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:scrollable="false" />
+                </FrameLayout>
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="2"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp">
+
+                    <TextView
+                        android:layout_rowWeight="1"
+                        android:layout_columnSpan="2"
+                        android:layout_columnWeight="1"
+                        android:padding="8dp"
+                        android:text="@string/ecg_settings" />
+
+                    <Button
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:onClick="@{((ECGFragment)content)::clickSetPagerSpeed}"
+                        android:text="@{@string/paper_speed_value(event.get(ECGFragment.EVENT_PAPER_SPEED)),default=@string/paper_speed_value}"
+                        android:textAllCaps="false" />
+
+                    <Button
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:onClick="@{((ECGFragment)content)::clickSetGain}"
+                        android:text="@{@string/gain_value(event.get(ECGFragment.EVENT_GAIN)),default=@string/gain_value}"
+                        android:textAllCaps="false" />
+
+                    <TextView
+                        android:layout_rowWeight="1"
+                        android:layout_columnSpan="2"
+                        android:layout_columnWeight="1"
+                        android:padding="8dp"
+                        android:text="@{@string/finger_detection(event.get(ECGFragment.EVENT_FINGER_DETECT)),default=@string/finger_detection}"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_rowWeight="1"
+                        android:layout_columnSpan="2"
+                        android:layout_columnWeight="1"
+                        android:padding="8dp"
+                        android:text="@{@string/ecg_sq(event.get(ECGFragment.EVENT_SQ)),default=@string/ecg_sq}"
+                        android:textSize="14sp" />
+
+
+                    <demo.minttihealth.widget.CountDownTextView
+                        android:id="@+id/countDown"
+                        android:layout_rowWeight="1"
+                        android:layout_columnSpan="2"
+                        android:layout_columnWeight="1"
+                        android:padding="8dp"
+                        android:textSize="14sp"
+                        app:countDownParams="@{30}"
+                        app:toggleCountDown="@{toggleCountDown}" />
+
+                    <TextView
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:padding="8dp"
+                        android:text="@{@string/rr_interval_value(model.r2r),default=@string/rr_interval_value}"
+                        android:textSize="14sp" />
+
+                    <!--<TextView
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:padding="8dp"
+                        android:text="@{@string/rr_max_value(model.r2R),default=@string/rr_max_value}"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:padding="8dp"
+                        android:text="@{@string/rr_min_value(model.r2R),default=@string/rr_min_value}"
+                        android:textSize="14sp" />-->
+
+                    <TextView
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:padding="8dp"
+                        android:text="@{@string/hr_value(model.hr),default=@string/hr_value}"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:padding="8dp"
+                        android:text="@{@string/hrv_value(model.hrv),default=@string/hrv_value}"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:padding="8dp"
+                        android:text="@{@string/rr_value(model.rr),default=@string/rr_value}"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:padding="8dp"
+                        android:text="@string/mood_value"
+                        android:textSize="14sp"
+                        app:formatMood="@{model.mood}" />
+
+                    <TextView
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:padding="8dp"
+                        android:text='@{String.format("Heart age: %d", model.ha),default="Heart age: %d"}'
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:padding="8dp"
+                        android:text='@{String.format("Heart beat: %d", model.hb),default="Heart beat: %d"}'
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:padding="8dp"
+                        android:text='@{String.format("Robust heart rate: %d BPM", model.rhr),default="Robust heart rate: %d BPM"}'
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:padding="8dp"
+                        android:textSize="14sp"
+                        app:formatStressLevel="@{model.stress}" />
+
+                </GridLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <Button
+            android:id="@+id/btn_measure"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{content::clickMeasure}"
+            android:text="@string/start_measuring"
+            android:textAllCaps="false"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+</layout>

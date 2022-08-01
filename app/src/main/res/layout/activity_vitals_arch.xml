@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.VitalsArch"
+    android:background="@drawable/white_background">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:background="@drawable/white_background">
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@drawable/white_background">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="40dp"
+                    android:paddingTop="20dp"
+                    android:text="Select Date of Records"
+                    android:textColor="@color/black"
+                    android:textSize="25sp" />
+                <Button
+                    android:id="@+id/datepickerbtn"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/button_rounded"
+                    android:text="Add Date"
+                    android:textColor="#ffffff"
+                    android:textSize="10dp" />
+
+                <LinearLayout
+                    android:layout_gravity="center"
+                    android:layout_width="360dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="44dp"
+                    android:paddingTop="20dp">
+
+
+                    
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:paddingLeft="25dp"
+                        android:paddingTop="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="40dp"
+                            android:text="Date: "
+                            android:layout_gravity="center_vertical"
+                            />
+                        <TextView
+                            android:id="@+id/dateText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="40dp"
+
+                            android:layout_gravity="center_vertical"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:paddingLeft="25dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="40dp"
+                            android:text="Time: "
+                            android:layout_gravity="center_vertical"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:paddingLeft="25dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="40dp"
+                            android:text="Weight: "
+                            android:layout_gravity="center_vertical"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:paddingLeft="25dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="40dp"
+                            android:text="Sugar: "
+                            android:layout_gravity="center_vertical"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:paddingLeft="25dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="40dp"
+                            android:text="Saturation: "
+                            android:layout_gravity="center_vertical"
+                            />
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:paddingLeft="25dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="40dp"
+                            android:text="Respiration: "
+                            android:layout_gravity="center_vertical"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:paddingLeft="25dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="40dp"
+                            android:text="Pulse: "
+                            android:layout_gravity="center_vertical"
+                            />
+
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:paddingLeft="25dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="40dp"
+                            android:text="Diastolic: "
+                            android:layout_gravity="center_vertical"
+                            />
+
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:paddingLeft="25dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="40dp"
+                            android:text="Systolic: "
+                            android:layout_gravity="center_vertical"
+                            />
+
+
+
+                    </LinearLayout>
+
+
+
+
+
+                </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </LinearLayout>
+
+
+
+
+
+
+
+
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

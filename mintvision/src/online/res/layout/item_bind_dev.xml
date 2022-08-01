@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="item"
+            type="lib.linktop.obj.Device" />
+
+        <variable
+            name="id"
+            type="androidx.databinding.ObservableField&lt;String&gt;" />
+
+        <variable
+            name="clickGetDevActiveInfo"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text='@{"Dev id : " + item.devId}'
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text='@{"Status : " + (item.isPrimaryBind ? "bind":"follow")}'
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="点击获取\n设备激活信息"
+            android:textScaleX="0.8"
+            android:textSize="12sp"
+            app:onViewClick="@{clickGetDevActiveInfo}"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="当前设备"
+            android:visibility="@{id.equals(item.devId) ? View.VISIBLE:View.INVISIBLE}" />
+
+    </LinearLayout>
+</layout>

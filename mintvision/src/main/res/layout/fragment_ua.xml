@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="model"
+            type="demo.minttihealth.bean.Bg" />
+
+        <variable
+            name="content"
+            type="demo.minttihealth.fmt.MeasureFragment" />
+
+        <variable
+            name="event"
+            type="androidx.databinding.ObservableField&lt;String&gt;" />
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/test_paper_measurement_steps_dsc"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/chol_and_ua_measurement_step1" />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spin_test_paper_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/chol_and_ua_measurement_step2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{event}"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="@{@string/ua_result(model.value)}"
+                android:textSize="36sp" />
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_measure"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{content::clickMeasure}"
+            android:text="@string/start_measuring"
+            android:textAllCaps="false"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="listCount"
+            type="androidx.databinding.ObservableInt" />
+
+        <variable
+            name="recyclerAdapter"
+            type="androidx.recyclerview.widget.RecyclerView.Adapter" />
+
+        <variable
+            name="itemClickListener"
+            type="demo.minttihealth.widget.CustomRecyclerView.RecyclerItemClickListener" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <demo.minttihealth.widget.CustomRecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="8dp"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:paddingTop="8dp"
+            app:layoutManager="LinearLayoutManager"
+            app:onItemClickListener="@{itemClickListener}"
+            app:recyclerAdapter="@{recyclerAdapter}" />
+
+        <TextView
+            android:id="@+id/tv_scanning_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="12dp"
+            android:text="@string/scanning"
+            android:textSize="16sp"
+            android:visibility="@{listCount == 0 ? View.VISIBLE : View.GONE}" />
+    </FrameLayout>
+</layout>

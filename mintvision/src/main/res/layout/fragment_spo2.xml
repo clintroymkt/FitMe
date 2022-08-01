@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="com.linktop.whealthService.task.OxTask" />
+
+        <import type="demo.minttihealth.fmt.SPO2Fragment" />
+
+        <!-- <import type="androidx.databinding.ObservableArrayMap" />-->
+
+        <variable
+            name="content"
+            type="demo.minttihealth.fmt.MeasureFragment" />
+
+        <variable
+            name="model"
+            type="demo.minttihealth.bean.SpO2" />
+
+        <variable
+            name="irProgress"
+            type="androidx.databinding.ObservableInt" />
+
+        <variable
+            name="redProgress"
+            type="androidx.databinding.ObservableInt" />
+
+        <!--<variable
+            name="extremeDataArr"
+            type="ObservableArrayMap&lt;String,Integer&gt;" />-->
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <demo.minttihealth.widget.WaveView
+            android:id="@+id/ppgWave"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_gravity="center"
+            android:background="@color/colorPrimary"
+            android:contentDescription="@null" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="@{@string/spo2h_value(model.value),default=@string/spo2h_value}"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="@{@string/hr_value(model.hr),default=@string/hr_value}"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_measure"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:onClick="@{content::clickMeasure}"
+                android:text="@string/start_measuring"
+                android:textAllCaps="false"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fitnessbands.scan.ScanActivity"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+
+  >
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/greeting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/date"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="40sp"
+        android:layout_marginEnd="40sp"
+        android:layout_marginBottom="10sp"
+        android:elevation="1dp"
+        android:text="Please click the scan button and choose your device, "
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+
+    <Button
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:id="@+id/btn_scan_toggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/start_bscan"/>
+
+   <!-- <Button
+        android:id="@+id/btn_hs_upgrade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hs_upgrade"
+        /> -->
+
+ <!--   <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <Button
+            android:id="@+id/btn_firmware_fix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/firmware_fix" />
+
+        <TextView
+            android:id="@+id/tv_firmware_fix_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"/>
+
+    </LinearLayout> -->
+
+    <androidx.recyclerview.widget.RecyclerView
+
+        android:id="@+id/scan_results"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:scrollbars="vertical"
+        />
+
+    <Button
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:id="@+id/btnRecovery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recover Data"/>
+
+    <Button
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:id="@+id/btnlogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Logout"/>
+
+            </LinearLayout>
+        </ScrollView>
+
+
+</LinearLayout>

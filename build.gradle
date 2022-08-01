@@ -1,0 +1,45 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    repositories {
+        google()
+        jcenter()
+
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.1.2'
+        classpath 'com.tencent.bugly:symtabfileuploader:2.2.1'
+        classpath 'com.google.gms:google-services:4.3.10'
+        //classpath 'com.jakewharton:butterknife-compiler:10.2.3'
+
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        jcenter()
+        maven { url 'http://raw.github.com/saki4510t/libcommon/master/repository/' }
+        maven { url "https://jitpack.io" }
+
+        flatDir {
+            dirs '../aars'
+        }
+
+    }
+}
+
+//ext {
+//    compileSdkVersion = 30
+//    minSdkVersion = 21
+//   targetSdkVersion = 30
+//    versionCode = 1610336546
+//   versionName = "2.5.5"
+//}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

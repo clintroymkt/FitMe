@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="demo.minttihealth.health">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application tools:ignore="AllowBackup,GoogleAppIndexingWarning">
+
+        <!--3rd key & secret of zydb-->
+        <meta-data
+            android:name="appkey"
+            android:value="902f8741c0814966b86d27326a14c265" />
+        <meta-data
+            android:name="appsecret"
+            android:value="cb6485aab56449afa5c65452a322cef2" />
+
+        <activity
+            android:name="demo.minttihealth.activity.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name="demo.minttihealth.activity.SetAccountActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+
+        <activity
+            android:name="demo.minttihealth.activity.ShowDownloadDataActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+    </application>
+
+</manifest>

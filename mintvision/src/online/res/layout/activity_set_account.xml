@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="androidx.databinding.ObservableField" />
+
+        <import type="android.view.View" />
+
+        <variable
+            name="accInfo"
+            type="demo.minttihealth.bean.AccInfo" />
+
+        <variable
+            name="btnText"
+            type="ObservableField&lt;String&gt;" />
+
+        <variable
+            name="tilAccountError"
+            type="ObservableField&lt;String&gt;" />
+
+        <variable
+            name="tilPasswordError"
+            type="ObservableField&lt;String&gt;" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBackground">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <RadioGroup
+                android:id="@+id/radioG"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp">
+
+                <RadioButton
+                    android:id="@+id/rb_rgt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/register" />
+
+                <RadioButton
+                    android:id="@+id/rb_rsp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/reset_psw" />
+            </RadioGroup>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:error="@{tilAccountError}"
+                app:errorEnabled="true"
+                app:errorTextAppearance="@style/errorTextForInputLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tie_account"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="8dp"
+                    android:hint="@string/account"
+                    android:imeOptions="actionNext"
+                    android:inputType="phone"
+                    android:maxLength="15"
+                    android:text="@={accInfo.mobileNo}"
+                    android:textSize="16sp">
+
+                    <requestFocus />
+                </com.google.android.material.textfield.TextInputEditText>
+
+                <!-- <Button
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="判断账号是否注册"
+                     android:onClick="clickCheckIsRegister"
+                     android:visibility="@{is3rd ? View.GONE : View.VISIBLE}" />-->
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    app:error="@{tilPasswordError}"
+                    app:errorEnabled="true"
+                    app:errorTextAppearance="@style/errorTextForInputLayout">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/textInputEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="8dp"
+                        android:hint="@string/verification_code"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        android:text="@={accInfo.verificationCode}"
+                        android:textSize="16sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_weight="1.2"
+                    android:onClick="clickGetVerificationCode"
+                    android:text="@string/get_verification_code" />
+
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:error="@{tilPasswordError}"
+                app:errorEnabled="true"
+                app:errorTextAppearance="@style/errorTextForInputLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tie_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="8dp"
+                    android:hint="@string/password"
+                    android:imeOptions="actionDone"
+                    android:inputType="text|textPassword"
+                    android:text="@={accInfo.password}"
+                    android:textSize="16sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="doSetAccount"
+                android:text="@{btnText}" />
+
+        </LinearLayout>
+    </ScrollView>
+</layout>

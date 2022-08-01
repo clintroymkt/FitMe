@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Clint/AndroidStudioProjects/Fitme/app/src/main/res/drawable/side_pane_left.xml" value="0.20052083333333334" />
+        <entry key="..\:/Users/Clint/AndroidStudioProjects/Fitme/app/src/main/res/layout/activity_backupactivity.xml" value="0.184375" />
+        <entry key="..\:/Users/Clint/AndroidStudioProjects/Fitme/app/src/main/res/layout/activity_bppage.xml" value="0.184375" />
+        <entry key="..\:/Users/Clint/AndroidStudioProjects/Fitme/app/src/main/res/layout/activity_fit_dash.xml" value="0.24163319946452477" />
+        <entry key="..\:/Users/Clint/AndroidStudioProjects/Fitme/app/src/main/res/layout/activity_login.xml" value="0.184375" />
+        <entry key="..\:/Users/Clint/AndroidStudioProjects/Fitme/app/src/main/res/layout/activity_recover.xml" value="0.184375" />
+        <entry key="..\:/Users/Clint/AndroidStudioProjects/Fitme/app/src/main/res/layout/activity_scan.xml" value="0.184375" />
+        <entry key="..\:/Users/Clint/AndroidStudioProjects/Fitme/app/src/main/res/layout/activity_scan2.xml" value="0.184375" />
+        <entry key="..\:/Users/Clint/AndroidStudioProjects/Fitme/app/src/main/res/layout/activity_sign_up.xml" value="0.268370607028754" />
+        <entry key="..\:/Users/Clint/AndroidStudioProjects/Fitme/app/src/main/res/layout/activity_sign_up_forms.xml" value="0.184375" />
+        <entry key="..\:/Users/Clint/AndroidStudioProjects/Fitme/app/src/main/res/layout/activity_sleep_page.xml" value="0.1864801864801865" />
+        <entry key="..\:/Users/Clint/AndroidStudioProjects/Fitme/app/src/main/res/layout/activity_spo2page.xml" value="0.184375" />
+        <entry key="..\:/Users/Clint/AndroidStudioProjects/Fitme/app/src/main/res/layout/activity_steps_page.xml" value="0.184375" />
+        <entry key="..\:/Users/Clint/AndroidStudioProjects/Fitme/app/src/main/res/layout/bpdata_item.xml" value="0.1" />
+        <entry key="..\:/Users/Clint/AndroidStudioProjects/Fitme/app/src/main/res/layout/row_doconline.xml" value="0.184375" />
+        <entry key="..\:/Users/Clint/AndroidStudioProjects/Fitme/app/src/main/res/layout/sleepdata_item.xml" value="0.16077898550724637" />
+        <entry key="..\:/Users/Clint/AndroidStudioProjects/Fitme/app/src/main/res/layout/spo2data_item.xml" value="0.4466666666666667" />
+        <entry key="..\:/Users/Clint/AndroidStudioProjects/Fitme/app/src/main/res/layout/stepsdata_item.xml" value="0.184375" />
+        <entry key="..\:/Users/Clint/AndroidStudioProjects/Fitme/app/src/main/res/layout/stepsdatainv_item.xml" value="0.184375" />
+        <entry key="..\:/Users/Clint/AndroidStudioProjects/GMed- Myhealth - testbench/app/src/main/res/drawable/header_background.xml" value="0.20052083333333334" />
+        <entry key="..\:/Users/Clint/AndroidStudioProjects/GMed- Myhealth - testbench/app/src/main/res/drawable/white_background.xml" value="0.20052083333333334" />
+        <entry key="..\:/Users/Clint/AndroidStudioProjects/GMed- Myhealth - testbench/app/src/main/res/layout/activity_fit_dash.xml" value="0.3046471600688468" />
+        <entry key="..\:/Users/Clint/AndroidStudioProjects/GMed- Myhealth - testbench/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/Clint/AndroidStudioProjects/GMed- Myhealth - testbench/app/src/main/res/layout/activity_steps_page.xml" value="0.184375" />
+        <entry key="..\:/Users/Clint/AndroidStudioProjects/GMed- Myhealth - testbench/app/src/main/res/layout/stepsdata_item.xml" value="0.184375" />
+        <entry key="..\:/Users/Clint/AndroidStudioProjects/GMed- Myhealth - testbench/app/src/main/res/layout/stepsdatainv_item.xml" value="0.184375" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

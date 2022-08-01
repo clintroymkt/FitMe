@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="androidx.databinding.ObservableField" />
+
+        <variable
+            name="frag"
+            type="demo.minttihealth.fmt.MonitorInfoOnlineFragment" />
+
+        <variable
+            name="isLogin"
+            type="androidx.databinding.ObservableBoolean" />
+
+        <variable
+            name="isBind"
+            type="androidx.databinding.ObservableInt" />
+
+        <variable
+            name="recyclerAdapter"
+            type="androidx.recyclerview.widget.RecyclerView.Adapter" />
+    </data>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <include
+                android:id="@+id/fragment_monitor_info"
+                layout="@layout/fragment_monitor_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:orientation="vertical"
+                android:visibility="@{isLogin ? View.VISIBLE : View.GONE}">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="已 绑定/关注 的设备列表" />
+
+                <demo.minttihealth.widget.CustomRecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layoutManager="LinearLayoutManager"
+                    app:recyclerAdapter="@{recyclerAdapter}" />
+            </LinearLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{frag::clickBindDev}"
+                android:text='@{isBind == 0 ? "Click bind device":(isBind == 1 ?  "Click unbind device":"Click unfollow device")}'
+                android:textAllCaps="false"
+                android:visibility="@{isLogin ? View.VISIBLE : View.GONE,default=gone}" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{frag::clickGetFamilyMember}"
+                android:text="获取家庭成员列表"
+                android:textAllCaps="false"
+                android:visibility="@{isLogin ? View.VISIBLE:View.GONE,default=gone}" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{frag::clickShowDownloadData}"
+                android:text="从服务器获取已上传的测量数据"
+                android:textAllCaps="false"
+                android:visibility="@{isBind > 0? View.VISIBLE : View.GONE,default=gone}" />
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@drawable/white_background"
+
+    tools:context=".SignUpActivity">
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/logolayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/login_shape_bg"
+        android:orientation="vertical"
+        android:padding="30dp"
+        android:layout_marginTop="15dp"
+
+        tools:ignore="MissingConstraints"
+
+        >
+
+
+        <!--<TextView
+            android:fontFamily="@font/poppins_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Welcome"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="30sp" /> -->
+        <ImageView
+            android:elevation="2dp"
+            android:id="@+id/mhzlogo"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:src="@drawable/mhz">
+
+        </ImageView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/logolayout"
+        android:layout_width="220dp"
+        android:layout_height="480dp"
+        android:background="@drawable/side_pane_left"/>
+
+    <ScrollView
+        android:layout_below="@+id/logolayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+
+            android:layout_marginTop="80dp"
+            android:background="@drawable/login_shape_bg"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:gravity="center"
+
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+
+
+            android:layout_below="@+id/logolayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            android:elevation="10dp"
+            >
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <TextView
+                android:layout_marginTop="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enter Your OTP Below"
+                android:textSize="20sp"
+                android:textAlignment="center"/>
+
+
+
+
+            <com.google.android.material.textfield.TextInputEditText
+
+                android:id="@+id/txt_OTP"
+                android:paddingLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:textColorHint="@color/highlightColor"
+
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/edittext_bg"
+                android:ems="10"
+                android:fontFamily="@font/poppins_light"
+                android:hint="Enter OTP"
+                android:inputType="text"
+
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/submitOTP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/button_rounded"
+                android:text="Send OTP"
+                android:textColor="#ffffff"
+                android:textSize="15dp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="demo.minttihealth.health.App" />
+
+        <variable
+            name="content"
+            type="demo.minttihealth.fmt.IOnlineFragment" />
+
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/fragment_bp"
+            layout="@layout/fragment_bp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{content::clickUploadData}"
+            android:text="点击上传一次测量数据"
+            android:textSize="16sp"
+            android:visibility="@{App.isLogin?View.VISIBLE:View.GONE}" />
+
+    </LinearLayout>
+
+</layout>

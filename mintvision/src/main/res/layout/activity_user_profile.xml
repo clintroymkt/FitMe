@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="demo.minttihealth.activity.UserProfileActivity">
+
+    <data>
+
+        <import type="com.linktop.constant.IUserProfile" />
+
+        <variable
+            name="userProfile"
+            type="demo.minttihealth.bean.UserProfile" />
+
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBackground"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/username"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:text="@={userProfile.username}">
+
+                    <requestFocus />
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/gender"
+                android:textColor="@color/colorAccent"
+                android:textSize="12sp" />
+
+            <RadioGroup
+                android:id="@+id/rg_gender"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:checked="@{userProfile.gender==IUserProfile.FEMALE}"
+                    android:text="@string/female" />
+
+                <RadioButton
+                    android:id="@+id/rb_male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:checked="@{userProfile.gender==IUserProfile.MALE}"
+                    android:text="@string/male" />
+
+            </RadioGroup>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:hint="@string/birthday"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:onClick="clickSetBirthday"
+                    android:text="@{userProfile.formatBirthday}" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/height"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:text="@={userProfile.heightStr}" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/weight"
+                    android:imeOptions="actionNone"
+                    android:inputType="number"
+                    android:text="@={userProfile.weightStr}" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:contentDescription="@null"
+
+            android:onClick="clickSetUserProfile"
+            android:text="@android:string/ok"
+            app:fabSize="normal"
+            app:srcCompat="@drawable/ic_baseline_check" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

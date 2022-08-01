@@ -1,0 +1,6 @@
+include ':mintvision'
+include ':screenrecorder'
+include ':monitor'
+include ':mintsdk'
+include ':app', 'fitnessband'
+rootProject.name = "GMed"

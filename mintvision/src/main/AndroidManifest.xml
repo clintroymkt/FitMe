@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="demo.minttihealth.health">
+
+    <application
+
+        android:allowBackup="true"
+        android:label="@string/app_name"
+
+        android:theme="@style/LauncherTheme"
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning">
+
+
+
+
+        <!--        &lt;!&ndash;Linkop key & secret&ndash;&gt;
+                <meta-data
+                    android:name="appkey"
+                    android:value="840ebe7c2bfe4d529181063433ece0ef" />
+                <meta-data
+                    android:name="appsecret"
+                    android:value="426e26e82c704e5984b4a30071cc3775" />-->
+
+        <!--        &lt;!&ndash;3rd key & secret of lifestone&ndash;&gt;
+                <meta-data
+                    android:name="appkey"
+                    android:value="902feebe2bd04ba69a8bb1b87fdf95cc" />
+                <meta-data
+                    android:name="appsecret"
+                    android:value="972caa9127c74f8b825a23e1201f3e9c" />-->
+
+        <activity
+            android:name="demo.minttihealth.activity.LauncherActivity"
+            android:theme="@style/LauncherTheme"/>
+
+
+        <activity
+            android:name="demo.minttihealth.activity.MintActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="demo.minttihealth.activity.HealthMonitorActivity"
+            android:configChanges="keyboard|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name="demo.minttihealth.activity.ThermometerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2" />
+
+        <activity
+            android:name="demo.minttihealth.activity.ECGLargeActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name="demo.minttihealth.activity.UserProfileActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/AppTheme"/>
+
+        <service android:name="demo.minttihealth.health.HcService" />
+    </application>
+
+</manifest>

@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.DefDiag"
+    android:background="@color/colorWhite">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/white_background">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@drawable/white_background">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="40dp"
+                    android:paddingTop="20dp"
+                    android:text="Definitive Diagnosis"
+                    android:textColor="@color/black"
+                    android:textSize="25sp" />
+
+
+
+
+                <Button
+                    android:id="@+id/btnsaveHosp"
+                    android:layout_gravity="right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/button_background"
+                    android:text="Add New"
+                    android:textColor="#ffffff"
+                    android:textSize="15dp" />
+
+
+
+
+
+
+
+
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="center">
+
+
+
+
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scrollbars="horizontal|vertical">
+
+                        <TableLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="15dp"
+                            android:background="@drawable/white_background"
+                            android:scrollbars="horizontal"
+                            android:layout_gravity="center">
+
+                            <TableRow
+                                android:background="@color/purple_500">
+
+                                <TextView
+                                    android:layout_width="120dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Date"
+                                    android:textColor="@color/white"
+                                    android:padding="10sp"
+                                    android:textSize="14sp"
+                                    android:layout_weight="2"
+                                    android:gravity="center_horizontal"
+
+                                    />
+                                <TextView
+                                    android:layout_width="120dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Diagnosis"
+                                    android:textColor="@color/white"
+                                    android:padding="10sp"
+                                    android:textSize="14sp"
+                                    android:layout_weight="2"
+                                    android:gravity="center_horizontal"
+
+                                    />
+                                <TextView
+                                    android:layout_width="120dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Diagnosis Type"
+                                    android:textColor="@color/white"
+                                    android:padding="10sp"
+                                    android:textSize="14sp"
+                                    android:layout_weight="2"
+                                    android:gravity="center_horizontal"
+
+                                    />
+                                <TextView
+                                    android:layout_width="120dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Details"
+                                    android:textColor="@color/white"
+                                    android:padding="10sp"
+                                    android:textSize="14sp"
+                                    android:layout_weight="2"
+                                    android:gravity="center_horizontal"
+
+                                    />
+                                <TextView
+                                    android:layout_width="120dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Actions"
+                                    android:textColor="@color/white"
+                                    android:padding="10sp"
+                                    android:textSize="14sp"
+                                    android:layout_weight="2"
+                                    android:gravity="center_horizontal"
+
+                                    />
+
+
+
+
+
+
+
+
+
+
+
+                            </TableRow>
+
+
+
+                            <TableRow>
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Code 1"
+
+                                    android:padding="10sp"
+                                    android:textSize="14sp"
+                                    android:layout_weight="2"
+                                    android:gravity="center_horizontal"
+
+                                    />
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Description 1"
+
+                                    android:padding="10sp"
+                                    android:textSize="14sp"
+                                    android:layout_weight="2"
+                                    android:gravity="center_horizontal"
+
+                                    />
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Description 1"
+
+                                    android:padding="10sp"
+                                    android:textSize="14sp"
+                                    android:layout_weight="2"
+                                    android:gravity="center_horizontal"
+
+                                    />
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Description 1"
+
+                                    android:padding="10sp"
+                                    android:textSize="14sp"
+                                    android:layout_weight="2"
+                                    android:gravity="center_horizontal"
+
+                                    />
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Description 1"
+
+                                    android:padding="10sp"
+                                    android:textSize="14sp"
+                                    android:layout_weight="2"
+                                    android:gravity="center_horizontal"
+
+                                    />
+
+
+
+
+
+                            </TableRow>
+
+                            <TableRow>
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Code 1"
+
+                                    android:padding="10sp"
+                                    android:textSize="14sp"
+                                    android:layout_weight="2"
+                                    android:gravity="center_horizontal"
+
+                                    />
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Description 1"
+
+                                    android:padding="10sp"
+                                    android:textSize="14sp"
+                                    android:layout_weight="2"
+                                    android:gravity="center_horizontal"
+
+                                    />
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Description 1"
+
+                                    android:padding="10sp"
+                                    android:textSize="14sp"
+                                    android:layout_weight="2"
+                                    android:gravity="center_horizontal"
+
+                                    />
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Description 1"
+
+                                    android:padding="10sp"
+                                    android:textSize="14sp"
+                                    android:layout_weight="2"
+                                    android:gravity="center_horizontal"
+
+                                    />
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Description 1"
+
+                                    android:padding="10sp"
+                                    android:textSize="14sp"
+                                    android:layout_weight="2"
+                                    android:gravity="center_horizontal"
+
+                                    />
+
+
+
+                            </TableRow>
+
+                            <TableRow>
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Code 1"
+
+                                    android:padding="10sp"
+                                    android:textSize="14sp"
+                                    android:layout_weight="2"
+                                    android:gravity="center_horizontal"
+
+                                    />
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Description 1"
+
+                                    android:padding="10sp"
+                                    android:textSize="14sp"
+                                    android:layout_weight="2"
+                                    android:gravity="center_horizontal"
+
+                                    />
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Description 1"
+
+                                    android:padding="10sp"
+                                    android:textSize="14sp"
+                                    android:layout_weight="2"
+                                    android:gravity="center_horizontal"
+
+                                    />
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Description 1"
+
+                                    android:padding="10sp"
+                                    android:textSize="14sp"
+                                    android:layout_weight="2"
+                                    android:gravity="center_horizontal"
+
+                                    />
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Description 1"
+
+                                    android:padding="10sp"
+                                    android:textSize="14sp"
+                                    android:layout_weight="2"
+                                    android:gravity="center_horizontal"
+
+                                    />
+
+
+
+
+                            </TableRow>
+
+                        </TableLayout>
+
+                    </HorizontalScrollView>
+
+
+
+
+
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.ScheduleConsult"
+    android:background="@drawable/white_background">
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="40dp"
+                android:paddingTop="20dp"
+                android:text="Schedule Consult"
+                android:textColor="@color/black"
+                android:textSize="25sp" />
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="5dp">
+                <Button
+                    android:id="@+id/datepickerbtn"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/button_rounded"
+                    android:text="Propose Date"
+                    android:textColor="#ffffff"
+                    android:textSize="10dp" />
+
+                <TextView
+                    android:id="@+id/dateTextRev"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="40dp"
+                    android:paddingTop="20dp"
+                    android:textSize="25sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="5dp">
+                <Button
+                    android:id="@+id/timepickerbtn"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/button_rounded"
+                    android:text="Select Time"
+                    android:textColor="#ffffff"
+                    android:textSize="10dp" />
+
+                <TextView
+                    android:id="@+id/timeTextCons"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="40dp"
+                    android:paddingTop="20dp"
+                    android:textSize="25sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="40dp"
+                android:paddingTop="20dp"
+                android:text="To Doctor:"
+                android:textColor="@color/black"
+                android:textSize="25sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="40dp"
+                android:paddingTop="20dp"
+                android:text="For Patient:"
+                android:textColor="@color/black"
+                android:textSize="25sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:weightSum="1"
+                android:orientation="vertical">
+
+
+
+                <EditText
+                    android:id="@+id/add_presentingcomphist"
+                    android:layout_margin="20dp"
+                    android:maxLines="50"
+                    android:padding="10dp"
+                    android:paddingTop="20dp"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/et_layout"
+
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/purple_500"
+                    android:paddingLeft="40dp"
+                    android:hint="Comment"
+                    android:inputType="textMultiLine"
+                    android:gravity="top"/>
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnscheduleCons"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="77dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/button_background"
+                android:text="Schedule Consult"
+                android:textColor="#ffffff"
+                android:textSize="15dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

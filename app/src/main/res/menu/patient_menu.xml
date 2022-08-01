@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_dashboard"
+
+            android:title="Dashboard" />
+        <item
+            android:id="@+id/nav_complaints"
+
+            android:title="Complaints" />
+        <item
+            android:id="@+id/nav_sysrev"
+
+            android:title="Systemic Review" />
+
+        <item
+            android:id="@+id/nav_medhist"
+
+            android:title="Medical History" />
+        <item
+            android:id="@+id/nav_summary"
+
+            android:title="Assesment/Review" />
+        <item
+            android:id="@+id/nav_physex"
+
+            android:title="Physical Examinations" />
+        <item
+            android:id="@+id/nav_diagnosis"
+
+            android:title="Diagnosis" />
+        <item
+            android:id="@+id/nav_management"
+
+            android:title="Management" />
+        <item
+            android:id="@+id/nav_billing"
+
+            android:title="Billing" />
+
+    </group>
+
+
+
+</menu>

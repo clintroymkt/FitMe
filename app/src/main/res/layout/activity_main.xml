@@ -1,0 +1,1028 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context=".ui.MainActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+
+
+
+        android:scrollbars="vertical"
+        >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:id="@+id/layoutHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/header_background"
+        android:elevation="8dp"
+        android:padding="10dp"
+
+        app:layout_scrollFlags = "scroll|snap|exitUntilCollapsed"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/logolayout"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/white_rectangle_background"
+            android:orientation="horizontal"
+
+
+            tools:layout_editor_absoluteX="25dp">
+
+            <ImageView
+                android:id="@+id/myhealthlogo"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+
+
+
+
+                android:src="@drawable/mhz"
+
+                />
+
+            <ImageButton
+                android:id="@+id/imageMenu"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="60dp"
+
+                android:background="@color/colorWhite"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_logout"
+
+                app:tint="@color/black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/gdmorninglayout"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/white_rectangle_background"
+            android:orientation="horizontal"
+
+
+            tools:layout_editor_absoluteX="25dp">
+        <TextView
+
+            android:id="@+id/textHello"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Good Morning"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintTop_toBottomOf="@+id/myhealthlogo" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="5dp"
+            android:text="Patient!"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+
+            app:layout_constraintStart_toEndOf="@id/textHello"
+            app:layout_constraintTop_toBottomOf="@+id/myhealthlogo" />
+
+        </LinearLayout>
+
+
+
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/white_rectangle_background"
+            android:orientation="horizontal"
+
+
+            tools:layout_editor_absoluteX="25dp">
+
+            <EditText
+                android:id="@+id/searchbox"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/search_bar_background"
+                android:hint="Search "
+
+                android:imeOptions="actionSearch"
+
+                android:inputType="text"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:textColor="@color/teal_200"
+                android:textSize="16sp"
+                android:importantForAutofill="no"/>
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:background="@drawable/search_icon_background"
+                android:contentDescription="@string/app_name"
+                android:padding="6dp"
+                android:src="@drawable/ic_search"
+                app:tint="@color/purple_500" />
+
+
+        </LinearLayout>
+
+        </LinearLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/cardslayout"
+
+
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:background="@drawable/white_background"
+            android:layout_marginBottom="20dp"
+
+            >
+
+
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cardlayout"
+                android:layout_width="match_parent"
+                android:layout_marginTop="180dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/white_background"
+                android:orientation="vertical"
+                android:padding="15dp"
+
+
+                tools:ignore="MissingConstraints">
+
+
+                <RelativeLayout
+                    android:id="@+id/statuscard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="15dp"
+
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/bg_emowellness"
+                    android:elevation="10dp">
+
+                    <LinearLayout
+                        android:id="@+id/wellnesslayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:elevation="8dp"
+                        android:orientation="vertical"
+                        android:weightSum="100">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginLeft="@dimen/dp_10"
+                            android:layout_weight="40"
+                            android:paddingStart="20sp"
+
+
+                            android:textColor="@color/logoColorWhite"
+                            android:textSize="5sp"
+                            android:textStyle="bold" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true">
+
+                                <ImageView
+                                    android:id="@+id/statusimg"
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginBottom="@dimen/dp_10"
+                                    android:src="@drawable/deviceswhite" />
+
+                                <TextView
+                                    android:id="@+id/statusdesc"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/txtCalUnit"
+
+                                    android:layout_marginTop="@dimen/dp_10"
+                                    android:fontFamily="@font/nunito_bold"
+                                    android:gravity="center"
+                                    android:text="No MyHealth \nDevice(s) connected"
+
+
+                                    android:textAlignment="center"
+                                    android:textColor="@color/logoColorWhite"
+                                    android:textSize="14sp" />
+
+
+                            </RelativeLayout>
+
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <RelativeLayout
+                android:id="@+id/sliderlayout"
+
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cardlayout">
+
+
+                <com.denzcoskun.imageslider.ImageSlider
+                    android:id="@+id/findslider"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_margin="15dp"
+                    android:background="@drawable/white_background"
+                    app:auto_cycle="true"
+                    app:corner_radius="20"
+                    app:delay="2"
+                    app:error_image="@drawable/dashboard_card"
+                    app:period="3000"
+                    app:placeholder="@color/black"
+                    app:selected_dot="@drawable/transparentdot"
+                    app:unselected_dot="@drawable/transparentdot">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/nunito_bold"
+                        android:text="Find"
+                        android:textColor="@color/logoColorWhite"
+                        android:textSize="35sp" />
+                </com.denzcoskun.imageslider.ImageSlider>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_below="@id/sliderlayout"
+
+
+                android:id="@+id/wellnesssliderlayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
+
+
+
+
+                <com.denzcoskun.imageslider.ImageSlider
+
+                    android:layout_width="match_parent"
+                    android:background="@drawable/white_background"
+                    app:unselected_dot="@drawable/transparentdot"
+                    app:selected_dot="@drawable/transparentdot"
+
+                    android:layout_height="140dp"
+                    app:auto_cycle="true"
+                    app:delay="6"
+                    app:period="3000"
+                    app:placeholder="@color/black"
+                    app:error_image="@drawable/dashboard_card"
+                    android:id="@+id/wellnessslider"
+                    app:corner_radius="20"
+
+                    android:padding="10dp"
+
+
+
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nunito_bold"
+                        android:textColor="@color/logoColorWhite"
+                        android:text="Wellness"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="20sp"/>
+                </com.denzcoskun.imageslider.ImageSlider>
+
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/optionslayout"
+                android:layout_below="@id/wellnesssliderlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+
+
+
+
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/virtdoccard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="15dp"
+                    android:padding="20dp"
+                    app:cardCornerRadius="20dp"
+
+                    android:layout_marginEnd="8dp"
+
+                    app:cardBackgroundColor="#E91E63"
+
+
+                    android:elevation="8dp">
+
+                    <LinearLayout
+                        android:id="@+id/virtdoclayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:weightSum="100">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:layout_weight="40"
+                            android:paddingStart="8sp"
+                            android:text="Virtual Doctor"
+                            android:textColor="@color/logoColorWhite"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                >
+
+                                <ImageView
+                                    android:layout_marginLeft="@dimen/dp_10"
+                                    android:layout_marginBottom="@dimen/dp_10"
+                                    android:id="@+id/virtdocimg"
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:src="@drawable/servicesbg" />
+
+                                <TextView
+                                    android:id="@+id/virtdocdesc"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/nunito_bold"
+                                    android:layout_below="@+id/txtCalUnit"
+                                    android:layout_marginLeft="100dp"
+                                    android:layout_marginTop="20dp"
+
+                                    android:text="For your online consultation"
+                                    android:textColor="@color/logoColorWhite"
+                                    android:textSize="12sp" />
+
+
+
+                            </RelativeLayout>
+
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/newsCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/virtdoccard"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="15dp"
+                    android:padding="20dp"
+                    app:cardCornerRadius="20dp"
+
+                    android:layout_marginEnd="8dp"
+
+                    app:cardBackgroundColor="#3F51B5"
+
+
+                    android:elevation="8dp">
+
+                    <LinearLayout
+                        android:id="@+id/newslayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:weightSum="100">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:layout_weight="40"
+                            android:paddingStart="8sp"
+                            android:text="Health News"
+                            android:textColor="@color/logoColorWhite"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                >
+
+                                <ImageView
+                                    android:layout_marginLeft="@dimen/dp_10"
+                                    android:layout_marginBottom="@dimen/dp_10"
+                                    android:id="@+id/newsimg"
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:src="@drawable/healthnews" />
+
+                                <TextView
+                                    android:id="@+id/newsdesc"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/nunito_bold"
+                                    android:layout_below="@+id/txtCalUnit"
+                                    android:layout_marginLeft="100dp"
+                                    android:layout_marginTop="20dp"
+
+                                    android:text="For the latest and trending Healthcare News"
+                                    android:textColor="@color/logoColorWhite"
+                                    android:textSize="12sp" />
+
+
+
+                            </RelativeLayout>
+
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/recordscard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/newsCard"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="15dp"
+                    android:padding="20dp"
+                    app:cardCornerRadius="20dp"
+
+                    android:layout_marginEnd="8dp"
+
+                    app:cardBackgroundColor="@color/logoColorGold"
+
+
+                    android:elevation="8dp">
+
+                    <LinearLayout
+                        android:id="@+id/wellnessconslayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:weightSum="100">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:layout_weight="40"
+                            android:paddingStart="8sp"
+                            android:text="My Records"
+                            android:textColor="@color/logoColorWhite"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                >
+
+                                <ImageView
+                                    android:layout_marginLeft="@dimen/dp_10"
+                                    android:layout_marginBottom="@dimen/dp_10"
+                                    android:id="@+id/recordsimg"
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:src="@drawable/recordswhite" />
+
+                                <TextView
+                                    android:id="@+id/recordsdesc"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/nunito_bold"
+                                    android:layout_below="@+id/txtCalUnit"
+                                    android:layout_marginLeft="100dp"
+                                    android:layout_marginTop="20dp"
+
+                                    android:text="View Your Health and Wellness Records"
+                                    android:textColor="@color/logoColorWhite"
+                                    android:textSize="12sp" />
+
+
+
+                            </RelativeLayout>
+
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/devicescard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/recordscard"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="15dp"
+                    android:padding="20dp"
+                    app:cardCornerRadius="20dp"
+                    android:layout_marginEnd="8dp"
+
+                    app:cardBackgroundColor="#0C8E87"
+
+
+                    android:elevation="8dp">
+
+                    <LinearLayout
+                        android:id="@+id/deviceslayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:weightSum="100">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:layout_weight="40"
+                            android:paddingStart="8sp"
+                            android:text="My Devices"
+                            android:textColor="@color/logoColorWhite"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                >
+
+                                <ImageView
+                                    android:layout_marginLeft="@dimen/dp_10"
+                                    android:layout_marginBottom="@dimen/dp_10"
+                                    android:id="@+id/devicesimg"
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:src="@drawable/deviceswhite" />
+
+                                <TextView
+                                    android:id="@+id/devicesdesc"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/nunito_bold"
+                                    android:layout_below="@+id/txtCalUnit"
+                                    android:layout_marginLeft="100dp"
+                                    android:layout_marginTop="20dp"
+
+                                    android:text="Click her for Connected Health Devices"
+                                    android:textColor="@color/logoColorWhite"
+                                    android:textSize="12sp" />
+
+
+
+                            </RelativeLayout>
+
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </RelativeLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/white_background"
+                android:padding="20dp"
+                android:layout_below="@id/optionslayout"
+                android:elevation="8dp"
+                />
+
+       <!--     <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/firstrow"
+                android:layout_marginBottom="30dp"
+                android:layout_below="@id/sliderlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:weightSum="100">
+
+
+                <LinearLayout
+                    android:id="@+id/layoutPatients"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+
+
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/dashboard_card"
+                    android:elevation="8dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="1dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+
+                    app:layout_constraintDimensionRatio="H,1:1"
+                    app:layout_constraintEnd_toStartOf="@id/layoutDevices"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.062">
+
+                    <ImageButton
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_margin="15dp"
+                        android:background="@drawable/white_rectangle_background"
+                        android:contentDescription="@string/app_name"
+                        android:padding="8dp"
+                        android:src="@drawable/recordsm" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="My Records"
+                        android:textColor="@color/teal_200"
+
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutDevices"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+
+                    android:background="@drawable/dashboard_card"
+
+                    android:elevation="8dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="1dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="H,1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/layoutPatients"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.062">
+
+                    <ImageButton
+                        android:id="@+id/fitness_devices"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_margin="15dp"
+                        android:background="@drawable/white_rectangle_background"
+                        android:contentDescription="@string/app_name"
+                        android:padding="8dp"
+                        android:src="@drawable/devicesm" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="My Devices"
+                        android:textColor="@color/teal_200"
+
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutNews"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="22dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/dashboard_card"
+                    android:elevation="8dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="1dp"
+                    app:layout_constraintDimensionRatio="H,1:1"
+                    app:layout_constraintEnd_toStartOf="@id/layoutDevices"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/layoutPatients">
+
+                    <ImageButton
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_margin="15dp"
+                        android:background="@drawable/white_rectangle_background"
+                        android:contentDescription="@string/app_name"
+                        android:padding="8dp"
+                        android:src="@drawable/articlesm" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Health\n News"
+                        android:textColor="@color/teal_200"
+
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutVirtualConsult"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="22dp"
+                    android:background="@drawable/dashboard_card"
+                    android:elevation="8dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="1dp"
+                    app:layout_constraintDimensionRatio="H,1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/layoutNews"
+                    app:layout_constraintTop_toBottomOf="@id/layoutDevices">
+
+                    <ImageButton
+                        android:id="@+id/btn_doclist"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_margin="15dp"
+                        android:background="@drawable/white_rectangle_background"
+                        android:contentDescription="@string/app_name"
+                        android:padding="8dp"
+                        android:src="@drawable/findservm" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Virtual \n Doctor"
+                        android:textColor="@color/teal_200"
+
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="22dp"
+                    android:background="@drawable/white_background"
+                    android:padding="20dp"
+                    android:layout_below="@id/firstrow"
+                    android:elevation="8dp"
+                    app:layout_constraintEnd_toEndOf="@id/layoutVirtualConsult"
+                    app:layout_constraintStart_toStartOf="@id/layoutPatients"
+                    app:layout_constraintTop_toBottomOf="@id/layoutNews" />
+
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+     <!-       <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/secondrow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/firstrow">
+
+            <LinearLayout
+                android:id="@+id/layoutNews"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="22dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/dashboard_card"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="1dp"
+                app:layout_constraintDimensionRatio="H,1:1"
+                app:layout_constraintEnd_toStartOf="@id/layoutDevices"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/"
+                android:elevation="8dp">
+
+                <ImageButton
+                    android:background="@drawable/white_rectangle_background"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_margin="15dp"
+                    android:contentDescription="@string/app_name"
+                    android:padding="8dp"
+                    android:src="@drawable/articlesm" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Health\n News"
+                    android:textColor="@color/teal_200"
+                    android:textSize="15sp"
+                    android:textStyle="bold"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutVirtualConsult"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="22dp"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/dashboard_card"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="1dp"
+                app:layout_constraintDimensionRatio="H,1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/layoutNews"
+                app:layout_constraintTop_toBottomOf="@id/layoutDevices"
+                android:elevation="8dp">
+
+                <ImageButton
+                    android:id="@+id/btn_doclist"
+                    android:background="@drawable/white_rectangle_background"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_margin="15dp"
+                    android:contentDescription="@string/app_name"
+                    android:padding="8dp"
+                    android:src="@drawable/findservm" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Consult \n Doctor"
+                    android:textColor="@color/teal_200"
+                    android:textSize="15sp"
+                    android:textStyle="bold"/>
+
+
+            </LinearLayout>
+                -->
+
+
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:backgroundTint="@color/colorWhite"
+        app:itemIconSize="20dp"
+        app:labelVisibilityMode="unlabeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/navigation_menu"
+        android:elevation="8dp"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
